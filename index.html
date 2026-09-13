@@ -33,12 +33,17 @@
 
     /* KONTAINER UTAMA DENGAN CSS GRID */
     .grid-container {
-      display: grid;              /* Mengaktifkan sistem layout CSS Grid */
-      grid-template-columns: 1fr; /* Default Mobile: 1 kolom vertikal agar rapi di HP */
-      gap: 1.25rem;               /* Jarak/celah antar kartu (20px) */
+      display: grid;
+      /* Mengaktifkan sistem layout CSS Grid */
+      grid-template-columns: 1fr;
+      /* Default Mobile: 1 kolom vertikal agar rapi di HP */
+      gap: 1.25rem;
+      /* Jarak/celah antar kartu (20px) */
       width: 100%;
-      max-width: 1700px;          /* Batas maksimal lebar layout agar 5 kartu leluasa */
-      margin: 0 auto;             /* Memposisikan kontainer tepat di tengah halaman */
+      max-width: 1700px;
+      /* Batas maksimal lebar layout agar 5 kartu leluasa */
+      margin: 0 auto;
+      /* Memposisikan kontainer tepat di tengah halaman */
     }
 
     /* TAMPILAN DESKTOP / TABLET (Layar dengan lebar minimal 768px) */
@@ -49,7 +54,11 @@
       }
 
       /* Semua 5 slot kartu memiliki ukuran yang sama persis (masing-masing 1 kolom) */
-      .slot-a, .slot-b, .slot-c, .slot-d, .slot-e {
+      .slot-a,
+      .slot-b,
+      .slot-c,
+      .slot-d,
+      .slot-e {
         grid-column: span 1;
       }
     }
@@ -76,17 +85,165 @@
     <!-- SLOT A: [NAMA ANGGOTA 1]                                              -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
-    <article id="slot-a" class="slot-a border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
+    <article id="slot-a"
+      class="slot-a border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
       Slot A
     </article>
 
 
     <!-- ===================================================================== -->
-    <!-- SLOT B: [NAMA ANGGOTA 2]                                              -->
+    <!-- SLOT B: Nelson Saputra                                              -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
-    <article id="slot-b" class="slot-b border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
-      Slot B
+    <article id="slot-b"
+      class="slot-b min-h-[700px] bg-gray-100 flex flex-col items-center justify-center py-6 rounded-xl">
+      <!-- Produk 1 -->
+      <span class="bg-orange-300 text-white text-xs font-semibold px-1.5 py-0.5 rounded">Nelson
+        Saputra</span>
+      <article class="bg-white text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-md overflow-hidden">
+        <!-- Gambar produk -->
+        <figure>
+          <img class="w-full h-full object-cover"
+            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Headphone" />
+        </figure>
+
+        <!-- Informasi produk -->
+        <div class="p-5 flex flex-col gap-3">
+          <!-- Identitas produk -->
+          <header>
+            <!-- Badge -->
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full text-xs bg-gray-100">
+                Stock Ready
+              </span>
+              <span class="px-3 py-1 rounded-full text-xs bg-gray-100">
+                Official Store
+              </span>
+            </div>
+
+            <!-- Nama produk -->
+            <h2 class="mt-2 font-semibold text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap"
+              title="SonicPro Wireless">
+              SonicPro Wireless
+            </h2>
+          </header>
+          <!-- Harga dan rating -->
+          <section>
+            <!-- Harga produk -->
+            <div>
+              <span class="text-xl font-bold"> Rp 240.000 </span>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-sm line-through opacity-50">
+                  Rp 300.000
+                </span>
+                <span class="bg-green-400 px-1.5 py-0.5 rounded-md text-xs text-white">
+                  20% Diskon!
+                </span>
+              </div>
+            </div>
+            <!-- Rating -->
+            <div class="flex items-center mt-1">
+              <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png" alt="Bintang" />
+              <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png" alt="Bintang" />
+              <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png" alt="Bintang" />
+              <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png" alt="Bintang" />
+              <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png" alt="Bintang" />
+              <span class="text-xs ml-2 text-gray-500"> 86k reviews </span>
+            </div>
+          </section>
+          <!-- Tombol aksi -->
+          <footer class="mt-5 flex gap-2">
+            <button
+              class="bg-yellow-500/80 hover:bg-yellow-500/90 px-6 py-2 rounded-md text-white font-medium tracking-wider transition">
+              Beli Sekarang
+            </button>
+            <button
+              class="flex-grow flex justify-center items-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md"
+              aria-label="Tambah ke keranjang">
+              <img class="opacity-50 w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/3514/3514491.png" alt="" />
+            </button>
+            <button
+              class="flex-grow flex justify-center items-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md"
+              aria-label="Lihat produk">
+              <img class="opacity-50 w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/159/159604.png" alt="" />
+            </button>
+          </footer>
+        </div>
+      </article>
+
+      <!-- Produk 2 -->
+      <article class="bg-white text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-md overflow-hidden">
+        <!-- Gambar produk -->
+        <figure>
+          <img class="w-full h-full object-cover"
+            src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMwfHxwcm9kdWN0fGVufDB8fDB8fHww"
+            alt="Headphone2" />
+        </figure>
+
+        <!-- Informasi produk -->
+        <div class="p-5 flex flex-col gap-3">
+          <!-- Identitas produk -->
+          <header>
+            <!-- Badge -->
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full text-xs bg-gray-100">
+                Stock Ready
+              </span>
+              <span class="px-3 py-1 rounded-full text-xs bg-gray-100">
+                Official Store
+              </span>
+            </div>
+
+            <!-- Nama produk -->
+            <h2 class="mt-2 font-semibold text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap"
+              title="ZenSound Pro">
+              ZenSound Pro
+            </h2>
+          </header>
+          <!-- Harga dan rating -->
+          <section>
+            <!-- Harga produk -->
+            <div>
+              <span class="text-xl font-bold"> Rp 187.500 </span>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-sm line-through opacity-50">
+                  Rp 250.000
+                </span>
+                <span class="bg-green-400 px-1.5 py-0.5 rounded-md text-xs text-white">
+                  25% Diskon!
+                </span>
+              </div>
+            </div>
+            <!-- Rating -->
+            <div class="flex items-center mt-1">
+              <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png" alt="Bintang" />
+              <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png" alt="Bintang" />
+              <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png" alt="Bintang" />
+              <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png" alt="Bintang" />
+              <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png" alt="Bintang" />
+              <span class="text-xs ml-2 text-gray-500"> 97k reviews </span>
+            </div>
+          </section>
+          <!-- Tombol aksi -->
+          <footer class="mt-5 flex gap-2">
+            <button
+              class="bg-yellow-500/80 hover:bg-yellow-500/90 px-6 py-2 rounded-md text-white font-medium tracking-wider transition">
+              Beli Sekarang
+            </button>
+            <button
+              class="flex-grow flex justify-center items-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md"
+              aria-label="Tambah ke keranjang">
+              <img class="opacity-50 w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/3514/3514491.png" alt="" />
+            </button>
+            <button
+              class="flex-grow flex justify-center items-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md"
+              aria-label="Lihat produk">
+              <img class="opacity-50 w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/159/159604.png" alt="" />
+            </button>
+          </footer>
+        </div>
+      </article>
     </article>
 
 
@@ -94,7 +251,8 @@
     <!-- SLOT C: [NAMA ANGGOTA 3]                                              -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
-    <article id="slot-c" class="slot-c border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
+    <article id="slot-c"
+      class="slot-c border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
       Slot C
     </article>
 
@@ -103,7 +261,8 @@
     <!-- SLOT D: [NAMA ANGGOTA 4]                                              -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
-    <article id="slot-d" class="slot-d border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
+    <article id="slot-d"
+      class="slot-d border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
       Slot D
     </article>
 
@@ -112,7 +271,8 @@
     <!-- SLOT E: [NAMA ANGGOTA 5]                                              -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
-    <article id="slot-e" class="slot-e border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
+    <article id="slot-e"
+      class="slot-e border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
       Slot E
     </article>
 
