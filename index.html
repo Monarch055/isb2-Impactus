@@ -33,17 +33,12 @@
 
     /* KONTAINER UTAMA DENGAN CSS GRID */
     .grid-container {
-      display: grid;
-      /* Mengaktifkan sistem layout CSS Grid */
-      grid-template-columns: 1fr;
-      /* Default Mobile: 1 kolom vertikal agar rapi di HP */
-      gap: 1.25rem;
-      /* Jarak/celah antar kartu (20px) */
+      display: grid;              /* Mengaktifkan sistem layout CSS Grid */
+      grid-template-columns: 1fr; /* Default Mobile: 1 kolom vertikal agar rapi di HP */
+      gap: 1.25rem;               /* Jarak/celah antar kartu (20px) */
       width: 100%;
-      max-width: 1700px;
-      /* Batas maksimal lebar layout agar 5 kartu leluasa */
-      margin: 0 auto;
-      /* Memposisikan kontainer tepat di tengah halaman */
+      max-width: 1700px;          /* Batas maksimal lebar layout agar 5 kartu leluasa */
+      margin: 0 auto;             /* Memposisikan kontainer tepat di tengah halaman */
     }
 
     /* TAMPILAN DESKTOP / TABLET (Layar dengan lebar minimal 768px) */
@@ -54,11 +49,7 @@
       }
 
       /* Semua 5 slot kartu memiliki ukuran yang sama persis (masing-masing 1 kolom) */
-      .slot-a,
-      .slot-b,
-      .slot-c,
-      .slot-d,
-      .slot-e {
+      .slot-a, .slot-b, .slot-c, .slot-d, .slot-e {
         grid-column: span 1;
       }
     }
@@ -85,8 +76,7 @@
     <!-- SLOT A: [NAMA ANGGOTA 1]                                              -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
-    <article id="slot-a"
-      class="slot-a border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
+    <article id="slot-a" class="slot-a border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
       Slot A
     </article>
 
@@ -247,12 +237,13 @@
     </article>
 
 
+
+
     <!-- ===================================================================== -->
     <!-- SLOT C: [NAMA ANGGOTA 3]                                              -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
-    <article id="slot-c"
-      class="slot-c border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
+    <article id="slot-c" class="slot-c border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
       Slot C
     </article>
 
@@ -261,8 +252,7 @@
     <!-- SLOT D: [NAMA ANGGOTA 4]                                              -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
-    <article id="slot-d"
-      class="slot-d border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
+    <article id="slot-d" class="slot-d border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
       Slot D
     </article>
 
@@ -271,8 +261,7 @@
     <!-- SLOT E: [NAMA ANGGOTA 5]                                              -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
-    <article id="slot-e"
-      class="slot-e border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
+    <article id="slot-e" class="slot-e border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
       Slot E
     </article>
 
