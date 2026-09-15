@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- Mendeklarasikan bahwa dokumen ini menggunakan standar HTML5 -->
+<html lang="id">
+<!-- Tag pembuka HTML dan menetapkan bahasa utama halaman ke Bahasa Indonesia -->
+
+<head>
+  <!-- Informasi meta dan pengaturan dokumen -->
+  <meta charset="UTF-8">
+  <!-- Encoding karakter universal (UTF-8) untuk mendukung semua simbol dan karakter -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Wajib ada agar tampilan responsif di layar HP (Mobile) maupun Laptop (Desktop) -->
+
+  <!-- Judul Halaman di tab browser -->
+  <title>Tugas Kelompok - Kerangka CSS Grid & Tailwind CSS</title>
+
+  <!-- ========================================================================= -->
+  <!-- 1. TAILWIND CSS PLAY CDN                                                  -->
+  <!-- Peserta langsung bisa menggunakan semua class Tailwind CSS tanpa instalasi! -->
+  <!-- ========================================================================= -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ========================================================================= -->
+  <!-- 2. KERANGKA CSS GRID (Wadah Utama Layout Kelompok)                         -->
+  <!-- Menggunakan CSS Grid murni untuk mengatur susunan slot kartu anggota     -->
+  <!-- ========================================================================= -->
+  <style>
+    /* Reset dasar margin dan padding */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* KONTAINER UTAMA DENGAN CSS GRID */
+    .grid-container {
+      display: grid;
+      /* Mengaktifkan sistem layout CSS Grid */
+      grid-template-columns: 1fr;
+      /* Default Mobile: 1 kolom vertikal agar rapi di HP */
+      gap: 1.25rem;
+      /* Jarak/celah antar kartu (20px) */
+      width: 100%;
+      max-width: 1700px;
+      /* Batas maksimal lebar layout agar 5 kartu leluasa */
+      margin: 0 auto;
+      /* Memposisikan kontainer tepat di tengah halaman */
+    }
+
+    /* TAMPILAN DESKTOP / TABLET (Layar dengan lebar minimal 768px) */
+    @media (min-width: 768px) {
+      .grid-container {
+        /* 5 Kolom berjajar dalam 1 baris lurus (tidak terbagi 2 baris) */
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      /* Semua 5 slot kartu memiliki ukuran yang sama persis (masing-masing 1 kolom) */
+      .slot-a,
+      .slot-b,
+      .slot-c,
+      .slot-d,
+      .slot-e {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-slate-100 text-slate-800 min-h-screen p-4 sm:p-8 font-sans">
+
+  <!-- ========================================================================= -->
+  <!-- HEADER / JUDUL HALAMAN KELOMPOK (Semantic HTML: <header>)                 -->
+  <!-- ========================================================================= -->
+  <header class="text-center max-w-3xl mx-auto mb-8">
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-indigo-700 tracking-tight">
+      Tim Impactus
+    </h1>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- AREA UTAMA DENGAN CSS GRID (Semantic HTML: <main>)                        -->
+  <!-- ========================================================================= -->
+  <main class="grid-container">
+
+    <!-- ===================================================================== -->
+    <!-- SLOT A: [NAMA ANGGOTA 1]                                              -->
+    <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
+    <!-- ===================================================================== -->
+    <article id="slot-a"
+      class="slot-a border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
+      Slot A
+    </article>
+
+    <!-- ===================================================================== -->
+    <!-- SLOT B: [NAMA ANGGOTA 2]                                              -->
+    <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
+    <!-- ===================================================================== -->
+    <article id="slot-b"
+      class="slot-b border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
+      Slot B
+    </article>
+
+
+    <!-- ===================================================================== -->
+    <!-- SLOT C: Muhammad Finlandia Rahman Mawlaa                              -->
+    <!-- Kerjakan desain kartumu di dalam tag <article> ini                    -->
+    <!-- ===================================================================== -->
+    <article id="slot-c"
+      class="slot-c bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col border border-slate-200">
+      <!-- Gambar Produk -->
+      <figure class="h-48 bg-slate-50 flex items-center justify-center p-4">
+        <img src="Laptop.jfif" alt="Laptop Ultrabook Layar Tipis"
+          class="h-full object-contain drop-shadow-md rounded-lg">
+      </figure>
+
+      <!-- Konten Card -->
+      <div class="p-5 flex flex-col flex-grow">
+        <!-- Nama Produk -->
+        <h2 class="text-xl font-bold text-slate-800 mb-1">Ultrabook Slim</h2>
+
+        <!-- Harga -->
+        <p class="text-lg font-bold text-indigo-600 mb-3">Rp 12.500.000</p>
+
+        <!-- Rating Bintang, Ulasan, dan Terjual -->
+        <div class="flex items-center gap-2 mb-3 text-sm">
+          <!-- Bintang -->
+          <div class="flex text-amber-400">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+          </div>
+          <!-- Angka Rating -->
+          <span class="font-semibold text-slate-700">4.6</span>
+          <!-- Jumlah Ulasan -->
+          <span class="text-slate-500">| 137 Ulasan</span>
+          <!-- Jumlah Terjual -->
+          <span class="text-slate-500">| 249 Terjual</span>
+        </div>
+
+        <!-- Deskripsi Singkat -->
+        <p class="text-sm text-slate-600 leading-relaxed flex-grow">
+          Laptop ringan dengan layar bezel tipis dan performa tinggi. Cocok untuk produktivitas kerja dan desain grafis
+          sehari-hari.
+        </p>
+
+        <!-- Tombol Beli -->
+        <button
+          class="mt-4 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+          Beli Sekarang
+        </button>
+      </div>
+    </article>
+
+
+    <!-- ===================================================================== -->
+    <!-- SLOT D: [NAMA ANGGOTA 4]                                              -->
+    <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
+    <!-- ===================================================================== -->
+    <article id="slot-d"
+      class="slot-d border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
+      Slot d
+    </article>
+
+
+    <!-- ===================================================================== -->
+    <!-- SLOT E: [NAMA ANGGOTA 5]                                              -->
+    <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
+    <!-- ===================================================================== -->
+    <article id="slot-e"
+      class="slot-e border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
+      Slot e
+    </article>
+
+  </main>
+  <!-- Akhir dari area utama .grid-container -->
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER (Semantic HTML: <footer>)                                          -->
+  <!-- ========================================================================= -->
+  <footer class="text-center text-xs text-slate-400 mt-12 py-4">
+    &copy; Bootcamp ISB 2 - Tugas Kolaborasi Git & Web
+  </footer>
+
+</body>
+
+</html>
