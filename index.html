@@ -33,12 +33,17 @@
 
     /* KONTAINER UTAMA DENGAN CSS GRID */
     .grid-container {
-      display: grid;              /* Mengaktifkan sistem layout CSS Grid */
-      grid-template-columns: 1fr; /* Default Mobile: 1 kolom vertikal agar rapi di HP */
-      gap: 1.25rem;               /* Jarak/celah antar kartu (20px) */
+      display: grid;
+      /* Mengaktifkan sistem layout CSS Grid */
+      grid-template-columns: 1fr;
+      /* Default Mobile: 1 kolom vertikal agar rapi di HP */
+      gap: 1.25rem;
+      /* Jarak/celah antar kartu (20px) */
       width: 100%;
-      max-width: 1700px;          /* Batas maksimal lebar layout agar 5 kartu leluasa */
-      margin: 0 auto;             /* Memposisikan kontainer tepat di tengah halaman */
+      max-width: 1700px;
+      /* Batas maksimal lebar layout agar 5 kartu leluasa */
+      margin: 0 auto;
+      /* Memposisikan kontainer tepat di tengah halaman */
     }
 
     /* TAMPILAN DESKTOP / TABLET (Layar dengan lebar minimal 768px) */
@@ -253,8 +258,7 @@
             <button
               class="flex-grow flex justify-center items-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md"
               aria-label="Tambah ke keranjang">
-              <img class="opacity-50 w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/3514/3514491.png"
-                alt="" />
+              <img class="opacity-50 w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/3514/3514491.png" alt="" />
             </button>
             <button
               class="flex-grow flex justify-center items-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md"
@@ -327,8 +331,7 @@
             <button
               class="flex-grow flex justify-center items-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md"
               aria-label="Tambah ke keranjang">
-              <img class="opacity-50 w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/3514/3514491.png"
-                alt="" />
+              <img class="opacity-50 w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/3514/3514491.png" alt="" />
             </button>
             <button
               class="flex-grow flex justify-center items-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md"
@@ -342,14 +345,21 @@
 
     <!-- ===================================================================== -->
     <!-- SLOT C: Muhammad Finlandia Rahman Mawlaa                              -->
-    <!-- Kerjakan desain kartumu di dalam tag <article> ini                    -->
     <!-- ===================================================================== -->
     <article id="slot-c"
-      class="slot-c bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col border border-slate-200">
-      <!-- Gambar Produk -->
-      <figure class="h-48 bg-slate-50 flex items-center justify-center p-4">
+      class="slot-c bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col border border-slate-200 relative">
+
+      <!-- Label Nama Anggota -->
+      <div class="absolute top-4 left-0 right-0 z-10 flex justify-center">
+        <span class="bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded shadow-md tracking-wide">
+          Muhammad Finlandia Rahman Mawlaa
+        </span>
+      </div>
+
+      <!-- Gambar Produk (Diperbesar) -->
+      <figure class="h-64 bg-slate-50 flex items-center justify-center p-4">
         <img src="image/Laptop.jfif" alt="Laptop Ultrabook Layar Tipis"
-          class="h-full object-contain drop-shadow-md rounded-lg">
+          class="h-full w-full object-contain drop-shadow-lg rounded-lg">
       </figure>
 
       <!-- Konten Card -->
@@ -365,24 +375,19 @@
           <!-- Bintang -->
           <div class="flex text-amber-400">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-              <path
-                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
             </svg>
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-              <path
-                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
             </svg>
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-              <path
-                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
             </svg>
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-              <path
-                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
             </svg>
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-              <path
-                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
             </svg>
           </div>
           <!-- Angka Rating -->
@@ -409,7 +414,6 @@
 
     <!-- ===================================================================== -->
     <!-- SLOT D: ZUKOVSKI TANGGUH DIRGANTARA                                   -->
-    <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
     <article id="slot-d"
       class="slot-d relative min-h-[700px] flex flex-col bg-slate-900 text-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-900/20 hover:-translate-y-2 transition-all duration-300 ease-in-out border border-slate-700 group"
@@ -478,7 +482,6 @@
 
     <!-- ===================================================================== -->
     <!-- SLOT E: Visqya Pebriola Assyura                                       -->
-    <!-- Kerjakan desain kartumu di dalam tag <article> ini                    -->
     <!-- ===================================================================== -->
     <article id="slot-e"
       class="slot-e min-h-[700px] bg-[#eaf4fc] rounded-[20px] overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 border border-blue-100/90 flex flex-col relative group transition-all duration-300">
