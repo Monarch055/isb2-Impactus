@@ -260,69 +260,75 @@
 
 
     <!-- ===================================================================== -->
-    <!-- SLOT D: [NAMA ANGGOTA 4]                                              -->
+    <!-- SLOT D: ZUKOVSKI TANGGUH DIRGANTARA                                   -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
-    <article id="slot-d" class="slot-d min-h-[700px] flex flex-col items-center justify-center py-6 rounded-xl"
+    <article id="slot-d"
+      class="slot-d relative min-h-[700px] flex flex-col bg-slate-900 text-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-900/20 hover:-translate-y-2 transition-all duration-300 ease-in-out border border-slate-700 group"
       style="font-family: 'Poppins', sans-serif;">
-      <span class="relative -top-5 bg-[#28477E] text-white text-xs font-semibold px-3 py-1 rounded shadow-md">Zukovski
-        Tangguh Dirgantara</span>
-      <article class="bg-slate-900 text-white w-72 rounded-xl overflow-hidden border border-slate-700">
-        <figure class="w-full h-52 bg-white flex items-center justify-center p-4">
-          <img class="w-full h-full object-contain"
-            src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?q=80&w=1000&auto=format&fit=crop"
-            alt="Samsung Galaxy S25 FE" />
-        </figure>
+      <!-- LABEL NAMA PESERTA -->
+      <div class="absolute top-4 left-4 z-10">
+        <span class="bg-[#28477E] text-white text-xs font-semibold px-3 py-1 rounded shadow-md">Zukovski Tangguh
+          Dirgantara</span>
+      </div>
 
-        <!-- INFORMASI PRODUK -->
-        <div class="p-5 flex flex-col gap-3">
-          <header>
-            <div class="flex items-center gap-2 mb-2">
-              <span
-                class="px-2 py-1 rounded text-[10px] font-bold bg-[#28477E] text-white uppercase tracking-wider">Pre-Order</span>
+      <!-- BAGIAN GAMBAR PRODUK (Menggunakan flex-grow agar melar mengisi ruang) -->
+      <figure class="w-full flex-grow bg-white flex items-center justify-center overflow-hidden p-6 relative">
+        <img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+          src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?q=80&w=1000&auto=format&fit=crop"
+          alt="Samsung Galaxy S25 FE" />
+      </figure>
+
+      <!-- INFORMASI PRODUK -->
+      <div class="p-6 flex flex-col justify-between h-auto gap-4">
+        <header>
+          <div class="flex items-center gap-2 mb-3">
+            <span
+              class="px-2 py-1 rounded text-[10px] font-bold bg-[#28477E] text-white uppercase tracking-wider">Pre-Order</span>
+          </div>
+          <h3 class="font-bold text-2xl truncate" title="Samsung Galaxy S25 FE">Galaxy S25 FE</h3>
+          <p class="text-base text-slate-400 mt-2 line-clamp-3">Smartphone flagship terbaru dengan fitur AI mutakhir dan
+            perekaman video HDR10+. Desain elegan dan performa maksimal.</p>
+        </header>
+
+        <!-- HARGA DAN RATING -->
+        <section class="mt-2">
+          <!-- Bagian Harga Produk -->
+          <div>
+            <span class="text-3xl font-extrabold text-blue-400">Rp 10.500.000</span>
+          </div>
+
+          <!-- Bagian Rating & Ulasan -->
+          <div class="flex items-center mt-3">
+            <!-- Ikon Bintang Rating -->
+            <div class="flex text-yellow-400 text-lg tracking-widest">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
             </div>
-            <h3 class="font-bold text-xl truncate" title="Samsung Galaxy S25 FE">Galaxy S25 FE</h3>
-            <p class="text-sm text-slate-400 mt-1 line-clamp-2">Smartphone flagship terbaru dengan fitur AI mutakhir dan
-              perekaman video HDR10+.</p>
-          </header>
+            <!-- Teks Jumlah Ulasan -->
+            <span class="text-sm ml-2 text-slate-400">4.9 (12k reviews)</span>
+          </div>
+        </section>
 
-          <!-- HARGA DAN RATING -->
-          <section>
-            <!-- Bagian Harga Produk -->
-            <div>
-              <span class="text-xl font-extrabold text-blue-400">Rp 10.500.000</span>
-            </div>
-
-            <!-- Bagian Rating & Ulasan -->
-            <div class="flex items-center mt-2">
-              <!-- Ikon Bintang Rating -->
-              <div class="flex text-yellow-400 text-sm tracking-widest">
-                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-              </div>
-              <!-- Teks Jumlah Ulasan -->
-              <span class="text-xs ml-2 text-slate-400">4.9 (12k reviews)</span>
-            </div>
-          </section>
-
-          <footer class="mt-4 flex gap-2">
-            <!-- Tombol Utama (Beli/Pre-Order) -->
-            <button
-              class="flex-1 bg-[#28477E] hover:bg-blue-800 text-white font-semibold py-2 rounded-lg transition-colors duration-200 shadow-md">Pre-Order
-              Now</button>
-            <!-- Tombol Tambahan (Ikon Favorit/Wishlist) -->
-            <button
-              class="w-10 h-10 flex items-center justify-center bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors duration-200"
-              aria-label="Simpan">
-              <svg class="w-5 h-5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
-                </path>
-              </svg>
-            </button>
-          </footer>
-        </div>
-      </article>
+        <footer class="mt-6 flex gap-3">
+          <!-- Tombol Utama (Beli/Pre-Order) -->
+          <button
+            class="flex-1 bg-[#28477E] hover:bg-blue-800 text-white font-bold py-3 rounded-lg transition-colors duration-200 shadow-md text-base">
+            Pre-Order Now
+          </button>
+          <!-- Tombol Tambahan (Ikon Favorit/Wishlist) -->
+          <button
+            class="w-12 h-12 flex items-center justify-center bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors duration-200"
+            aria-label="Simpan">
+            <svg class="w-6 h-6 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+              </path>
+            </svg>
+          </button>
+        </footer>
+      </div>
     </article>
+
 
 
     <!-- ===================================================================== -->
