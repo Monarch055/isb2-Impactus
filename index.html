@@ -49,7 +49,11 @@
       }
 
       /* Semua 5 slot kartu memiliki ukuran yang sama persis (masing-masing 1 kolom) */
-      .slot-a, .slot-b, .slot-c, .slot-d, .slot-e {
+      .slot-a,
+      .slot-b,
+      .slot-c,
+      .slot-d,
+      .slot-e {
         grid-column: span 1;
       }
     }
@@ -76,13 +80,13 @@
     <!-- SLOT A: [NAMA ANGGOTA 1]                                              -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
-    <article id="slot-a" class="slot-a border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
+    <article id="slot-a"
+      class="slot-a border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
       Slot A
     </article>
 
-
     <!-- ===================================================================== -->
-    <!-- SLOT B: Nelson Saputra                                              -->
+    <!-- SLOT B: Nelson Saputra                                                -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
     <article id="slot-b"
@@ -151,7 +155,8 @@
             <button
               class="flex-grow flex justify-center items-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md"
               aria-label="Tambah ke keranjang">
-              <img class="opacity-50 w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/3514/3514491.png" alt="" />
+              <img class="opacity-50 w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/3514/3514491.png"
+                alt="" />
             </button>
             <button
               class="flex-grow flex justify-center items-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md"
@@ -224,7 +229,8 @@
             <button
               class="flex-grow flex justify-center items-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md"
               aria-label="Tambah ke keranjang">
-              <img class="opacity-50 w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/3514/3514491.png" alt="" />
+              <img class="opacity-50 w-4 h-4" src="https://cdn-icons-png.flaticon.com/128/3514/3514491.png"
+                alt="" />
             </button>
             <button
               class="flex-grow flex justify-center items-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md"
@@ -236,17 +242,72 @@
       </article>
     </article>
 
-
-
-
     <!-- ===================================================================== -->
-    <!-- SLOT C: [NAMA ANGGOTA 3]                                              -->
-    <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
+    <!-- SLOT C: Muhammad Finlandia Rahman Mawlaa                              -->
+    <!-- Kerjakan desain kartumu di dalam tag <article> ini                    -->
     <!-- ===================================================================== -->
-    <article id="slot-c" class="slot-c border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
-      Slot C
+    <article id="slot-c"
+      class="slot-c bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col border border-slate-200">
+      <!-- Gambar Produk -->
+      <figure class="h-48 bg-slate-50 flex items-center justify-center p-4">
+        <img src="image/Laptop.jfif" alt="Laptop Ultrabook Layar Tipis"
+          class="h-full object-contain drop-shadow-md rounded-lg">
+      </figure>
+
+      <!-- Konten Card -->
+      <div class="p-5 flex flex-col flex-grow">
+        <!-- Nama Produk -->
+        <h2 class="text-xl font-bold text-slate-800 mb-1">Ultrabook Slim</h2>
+
+        <!-- Harga -->
+        <p class="text-lg font-bold text-indigo-600 mb-3">Rp 12.500.000</p>
+
+        <!-- Rating Bintang, Ulasan, dan Terjual -->
+        <div class="flex items-center gap-2 mb-3 text-sm">
+          <!-- Bintang -->
+          <div class="flex text-amber-400">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+          </div>
+          <!-- Angka Rating -->
+          <span class="font-semibold text-slate-700">4.6</span>
+          <!-- Jumlah Ulasan -->
+          <span class="text-slate-500">| 137 Ulasan</span>
+          <!-- Jumlah Terjual -->
+          <span class="text-slate-500">| 249 Terjual</span>
+        </div>
+
+        <!-- Deskripsi Singkat -->
+        <p class="text-sm text-slate-600 leading-relaxed flex-grow">
+          Laptop ringan dengan layar bezel tipis dan performa tinggi. Cocok untuk produktivitas kerja dan desain grafis
+          sehari-hari.
+        </p>
+
+        <!-- Tombol Beli -->
+        <button
+          class="mt-4 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+          Beli Sekarang
+        </button>
+      </div>
     </article>
-
 
     <!-- ===================================================================== -->
     <!-- SLOT D: ZUKOVSKI TANGGUH DIRGANTARA                                   -->
@@ -316,7 +377,6 @@
         </footer>
       </div>
     </article>
-
 
     <!-- ===================================================================== -->
     <!-- SLOT E: Visqya Pebriola Assyura                                       -->
