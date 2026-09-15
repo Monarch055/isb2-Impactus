@@ -249,11 +249,72 @@
 
 
     <!-- ===================================================================== -->
-    <!-- SLOT D: [NAMA ANGGOTA 4]                                              -->
+    <!-- SLOT D: ZUKOVSKI TANGGUH DIRGANTARA                                   -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
-    <article id="slot-d" class="slot-d border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
-      Slot D
+    <article id="slot-d"
+      class="slot-d relative min-h-[700px] flex flex-col bg-slate-900 text-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-900/20 hover:-translate-y-2 transition-all duration-300 ease-in-out border border-slate-700 group"
+      style="font-family: 'Poppins', sans-serif;">
+      <div class="absolute top-4 left-1/2 -translate-x-1/2 z-10 w-max">
+        <span class="bg-[#28477E] text-white text-xs font-semibold px-3 py-1 rounded shadow-md">Zukovski Tangguh
+          Dirgantara</span>
+      </div>
+
+      <!-- BAGIAN GAMBAR PRODUK -->
+      <figure class="w-full flex-grow overflow-hidden relative bg-slate-800">
+        <img class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIGtOeuc2HZihAlcn2SNjzsJE0TyshVTWPRl_0_GLlfc_iQdBiLiUsrWY&s=10"
+          alt="Samsung Galaxy S25 FE" />
+      </figure>
+
+      <!-- INFORMASI PRODUK -->
+      <div class="p-6 flex flex-col justify-between h-auto gap-4">
+        <header>
+          <div class="flex items-center gap-2 mb-3">
+            <span
+              class="px-2 py-1 rounded text-[10px] font-bold bg-[#28477E] text-white uppercase tracking-wider">Tersedia</span>
+          </div>
+          <h3 class="font-bold text-xl truncate" title="Samsung Galaxy S25 FE">Galaxy S25 FE</h3>
+          <p class="text-sm text-slate-400 mt-2 line-clamp-3">Samsung Galaxy S25 FE adalah smartphone premium-value
+            dengan desain elegan, performa tinggi, dan fitur Galaxy AI terbaru.</p>
+        </header>
+
+        <!-- HARGA DAN RATING -->
+        <section class="mt-2">
+          <!-- Bagian Harga Produk -->
+          <div>
+            <span class="text-3xl font-extrabold text-blue-400">Rp10.500.000</span>
+          </div>
+
+          <!-- Bagian Rating & Ulasan -->
+          <div class="flex items-center mt-3">
+            <!-- Ikon Bintang Rating -->
+            <div class="flex text-yellow-400 text-lg tracking-widest">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <!-- Teks Jumlah Ulasan -->
+            <span class="text-sm ml-2 text-slate-400">4.9 (12k reviews)</span>
+          </div>
+        </section>
+
+        <footer class="mt-6 flex gap-3">
+          <!-- Tombol Utama (Beli) -->
+          <button
+            class="flex-1 bg-[#28477E] hover:bg-blue-800 text-white font-bold py-3 rounded-lg transition-colors duration-200 shadow-md text-base">
+            Beli Sekarang
+          </button>
+          <!-- Tombol Tambahan (Ikon Favorit/Wishlist) -->
+          <button
+            class="w-12 h-12 flex items-center justify-center bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors duration-200"
+            aria-label="Simpan">
+            <svg class="w-6 h-6 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+              </path>
+            </svg>
+          </button>
+        </footer>
+      </div>
     </article>
 
 
