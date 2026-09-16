@@ -33,12 +33,17 @@
 
     /* KONTAINER UTAMA DENGAN CSS GRID */
     .grid-container {
-      display: grid;              /* Mengaktifkan sistem layout CSS Grid */
-      grid-template-columns: 1fr; /* Default Mobile: 1 kolom vertikal agar rapi di HP */
-      gap: 1.25rem;               /* Jarak/celah antar kartu (20px) */
+      display: grid;
+      /* Mengaktifkan sistem layout CSS Grid */
+      grid-template-columns: 1fr;
+      /* Default Mobile: 1 kolom vertikal agar rapi di HP */
+      gap: 1.25rem;
+      /* Jarak/celah antar kartu (20px) */
       width: 100%;
-      max-width: 1700px;          /* Batas maksimal lebar layout agar 5 kartu leluasa */
-      margin: 0 auto;             /* Memposisikan kontainer tepat di tengah halaman */
+      max-width: 1700px;
+      /* Batas maksimal lebar layout agar 5 kartu leluasa */
+      margin: 0 auto;
+      /* Memposisikan kontainer tepat di tengah halaman */
     }
 
     /* TAMPILAN DESKTOP / TABLET (Layar dengan lebar minimal 768px) */
@@ -49,7 +54,11 @@
       }
 
       /* Semua 5 slot kartu memiliki ukuran yang sama persis (masing-masing 1 kolom) */
-      .slot-a, .slot-b, .slot-c, .slot-d, .slot-e {
+      .slot-a,
+      .slot-b,
+      .slot-c,
+      .slot-d,
+      .slot-e {
         grid-column: span 1;
       }
     }
@@ -73,169 +82,121 @@
   <main class="grid-container">
 
     <!-- ===================================================================== -->
-    <!-- SLOT A: Fil Ardhi - Ayam Geprek Anak IT                              -->
+    <!-- SLOT A: Fil Ardhi - KeyChron RGB Mechanical Keyboard                  -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
     <article id="slot-a"
-      class="slot-a min-h-[700px] bg-slate-100/50 flex flex-col items-center justify-center py-6 px-2 gap-3.5 rounded-xl">
+      class="slot-a relative min-h-[700px] w-full flex flex-col bg-slate-900 text-white rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20 border border-slate-700/80 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 group">
       
-      <!-- Badge Nama Pemilik Slot A -->
-      <div class="flex items-center gap-1.5 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-md">
-        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-        </svg>
-        <span>Slot A: Fil Ardhi</span>
+      <!-- Badge Nama Pemilik Slot A (Melayang Elegan) -->
+      <div class="absolute top-3 left-1/2 -translate-x-1/2 z-20 w-max">
+        <span class="bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md flex items-center gap-1.5 border border-indigo-400/50">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+          </svg>
+          Slot A: Fil Ardhi
+        </span>
       </div>
 
-      <!-- PRODUK 1: Ayam Geprek Sambal IT -->
-      <article
-        class="group bg-white text-slate-800 w-full max-w-[290px] rounded-xl shadow-md hover:shadow-lg border border-slate-200/80 overflow-hidden transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
-        <!-- Foto Produk 1 -->
-        <figure class="relative w-full h-28 bg-amber-50 overflow-hidden border-b border-slate-100">
-          <span class="absolute top-2 left-2 z-10 bg-red-500 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase shadow-sm">
-            Promo Kilat
+      <!-- Gambar Produk Elektronik -->
+      <figure class="relative w-full h-72 bg-slate-800/80 overflow-hidden flex items-center justify-center p-4 border-b border-slate-700/60 flex-shrink-0">
+        <!-- Badges Promo -->
+        <div class="absolute bottom-3 left-3 z-10 flex flex-col gap-1 items-start">
+          <span class="bg-indigo-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase shadow-sm">
+            Elektronik IT
           </span>
-          <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&auto=format&fit=crop&q=80"
-            alt="Ayam Geprek Anak IT"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            loading="lazy" />
-        </figure>
+          <span class="bg-slate-900/90 text-amber-400 text-[10px] font-bold px-2 py-0.5 rounded-full border border-amber-400/30">
+            🔥 Best for Coding
+          </span>
+        </div>
 
-        <!-- Informasi Produk 1 -->
-        <div class="p-3 flex flex-col gap-1.5">
+        <!-- Tombol Wishlist -->
+        <button type="button" aria-label="Simpan ke favorit"
+          class="absolute bottom-3 right-3 z-10 w-9 h-9 rounded-full bg-slate-800/90 hover:bg-slate-700 shadow-md flex items-center justify-center text-slate-300 hover:text-red-400 hover:scale-110 active:scale-95 transition-all border border-slate-600">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+        </button>
+
+        <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop&q=80"
+          alt="KeyChron Mechanical Keyboard"
+          class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
+          loading="lazy" />
+      </figure>
+
+      <!-- Informasi Produk -->
+      <div class="p-5 flex flex-col flex-grow justify-between gap-4">
+        <!-- Kategori & Rating -->
+        <header class="flex flex-col gap-1.5">
           <div class="flex items-center justify-between text-xs">
-            <span class="text-amber-700 font-bold uppercase text-[9px] bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200/60">
-              Makanan
+            <span class="text-indigo-300 font-semibold tracking-wide uppercase text-[10px] bg-indigo-950/80 border border-indigo-700/50 px-2 py-0.5 rounded">
+              Gadget & Hardware
             </span>
             <div class="flex items-center gap-1 text-amber-400">
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
               </svg>
-              <span class="text-slate-800 font-bold text-xs">4.9</span>
+              <span class="text-white font-bold text-xs">4.9</span>
+              <span class="text-slate-400 text-[10px]">(3.4k review)</span>
             </div>
           </div>
 
-          <h3 class="text-sm font-bold text-slate-900 group-hover:text-amber-600 transition-colors line-clamp-1" title="Ayam Geprek Anak IT">
-            Ayam Geprek Sambal IT
+          <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors" title="KeyChron Pro Mechanical Keyboard">
+            KeyChron RGB Mechanical
           </h3>
-          <p class="text-slate-500 text-[11px] line-clamp-1">
-            Ayam krispi gurih sambal bawang level koding.
+          <p class="text-slate-300 text-xs leading-relaxed line-clamp-3">
+            Mechanical keyboard wireless dengan switch Gateron Pro, baterai 4000mAh, dan RGB backlight yang nyaman untuk koding seharian tanpa pegal.
           </p>
+        </header>
 
-          <div class="flex items-center justify-between pt-1 border-t border-slate-100">
-            <div>
-              <span class="text-base font-extrabold text-amber-600">10k</span>
-              <span class="text-[10px] text-slate-400 line-through ml-1">15k</span>
-            </div>
-            <button type="button"
-              class="bg-amber-500 hover:bg-amber-600 active:scale-95 text-white font-semibold text-[11px] py-1 px-2.5 rounded-lg shadow-sm transition">
-              Beli
-            </button>
+        <!-- Fitur Singkat / Specs -->
+        <div class="grid grid-cols-2 gap-2 text-[11px] text-slate-300">
+          <div class="bg-slate-800/80 p-2 rounded-lg border border-slate-700 flex items-center gap-1.5">
+            <span class="text-indigo-400 font-bold">⚡</span>
+            <span>Tri-Mode Wireless</span>
+          </div>
+          <div class="bg-slate-800/80 p-2 rounded-lg border border-slate-700 flex items-center gap-1.5">
+            <span class="text-amber-400 font-bold">⌨️</span>
+            <span>Hot-swappable</span>
           </div>
         </div>
-      </article>
 
-      <!-- PRODUK 2: Kentang Krispi Full-Stack -->
-      <article
-        class="group bg-white text-slate-800 w-full max-w-[290px] rounded-xl shadow-md hover:shadow-lg border border-slate-200/80 overflow-hidden transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
-        <!-- Foto Produk 2 -->
-        <figure class="relative w-full h-28 bg-orange-50 overflow-hidden border-b border-slate-100">
-          <span class="absolute top-2 left-2 z-10 bg-orange-500 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase shadow-sm">
-            Favorit
+        <!-- Harga & Promo -->
+        <section class="flex items-baseline justify-between pt-3 border-t border-slate-700/60">
+          <div>
+            <p class="text-[10px] text-slate-400 font-medium">Harga Promo</p>
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-extrabold text-indigo-400 tracking-tight">Rp 899.000</span>
+              <span class="text-xs text-slate-500 line-through">Rp 1.199.000</span>
+            </div>
+          </div>
+          <span class="text-[10px] font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-600/50 px-2 py-0.5 rounded-md">
+            Diskon 25%
           </span>
-          <img src="https://images.unsplash.com/photo-1576107232684-1279f3908594?w=600&auto=format&fit=crop&q=80"
-            alt="Kentang Krispi Full-Stack"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            loading="lazy" />
-        </figure>
+        </section>
 
-        <!-- Informasi Produk 2 -->
-        <div class="p-3 flex flex-col gap-1.5">
-          <div class="flex items-center justify-between text-xs">
-            <span class="text-orange-700 font-bold uppercase text-[9px] bg-orange-50 px-1.5 py-0.5 rounded border border-orange-200/60">
-              Camilan
-            </span>
-            <div class="flex items-center gap-1 text-amber-400">
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-              <span class="text-slate-800 font-bold text-xs">4.8</span>
-            </div>
-          </div>
+        <!-- Tombol Aksi -->
+        <footer class="flex items-center gap-2 pt-2">
+          <button type="button"
+            class="flex-1 bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white font-bold text-xs py-3 px-3 rounded-xl shadow-md hover:shadow-indigo-600/30 transition-all duration-200 flex items-center justify-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span>Beli Sekarang</span>
+          </button>
+          <button type="button" aria-label="Tambah ke keranjang"
+            class="p-3 text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 active:scale-95 rounded-xl border border-slate-700 transition-all duration-200 flex items-center justify-center">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </button>
+        </footer>
 
-          <h3 class="text-sm font-bold text-slate-900 group-hover:text-orange-600 transition-colors line-clamp-1" title="Kentang Krispi Full-Stack">
-            Kentang Krispi Full-Stack
-          </h3>
-          <p class="text-slate-500 text-[11px] line-clamp-1">
-            Kentang goreng renyah bumbu keju gurih mantap.
-          </p>
-
-          <div class="flex items-center justify-between pt-1 border-t border-slate-100">
-            <div>
-              <span class="text-base font-extrabold text-orange-600">8k</span>
-              <span class="text-[10px] text-slate-400 line-through ml-1">12k</span>
-            </div>
-            <button type="button"
-              class="bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-semibold text-[11px] py-1 px-2.5 rounded-lg shadow-sm transition">
-              Beli
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <!-- PRODUK 3: Es Teh Jumbo Anti-Bug -->
-      <article
-        class="group bg-white text-slate-800 w-full max-w-[290px] rounded-xl shadow-md hover:shadow-lg border border-slate-200/80 overflow-hidden transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
-        <!-- Foto Produk 3 -->
-        <figure class="relative w-full h-28 bg-emerald-50 overflow-hidden border-b border-slate-100">
-          <span class="absolute top-2 left-2 z-10 bg-emerald-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase shadow-sm">
-            Best Seller
-          </span>
-          <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&auto=format&fit=crop&q=80"
-            alt="Es Teh Manis Jumbo Anti-Bug"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            loading="lazy" />
-        </figure>
-
-        <!-- Informasi Produk 3 -->
-        <div class="p-3 flex flex-col gap-1.5">
-          <div class="flex items-center justify-between text-xs">
-            <span class="text-emerald-700 font-bold uppercase text-[9px] bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200/60">
-              Minuman
-            </span>
-            <div class="flex items-center gap-1 text-amber-400">
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-              <span class="text-slate-800 font-bold text-xs">5.0</span>
-            </div>
-          </div>
-
-          <h3 class="text-sm font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-1" title="Es Teh Jumbo Anti-Bug">
-            Es Teh Jumbo Anti-Bug
-          </h3>
-          <p class="text-slate-500 text-[11px] line-clamp-1">
-            Teh melati manis segar pelepas dahaga fix bug!
-          </p>
-
-          <div class="flex items-center justify-between pt-1 border-t border-slate-100">
-            <div>
-              <span class="text-base font-extrabold text-emerald-600">5k</span>
-              <span class="text-[10px] text-slate-400 line-through ml-1">7k</span>
-            </div>
-            <button type="button"
-              class="bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-semibold text-[11px] py-1 px-2.5 rounded-lg shadow-sm transition">
-              Beli
-            </button>
-          </div>
-        </div>
-      </article>
-
+      </div>
     </article>
 
-
     <!-- ===================================================================== -->
-    <!-- SLOT B: Nelson Saputra                                              -->
+    <!-- SLOT B: Nelson Saputra                                                -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
     <article id="slot-b"
@@ -389,21 +350,77 @@
       </article>
     </article>
 
-
-
-
     <!-- ===================================================================== -->
-    <!-- SLOT C: [NAMA ANGGOTA 3]                                              -->
-    <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
+    <!-- SLOT C: Muhammad Finlandia Rahman Mawlaa                              -->
     <!-- ===================================================================== -->
-    <article id="slot-c" class="slot-c border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
-      Slot C
+    <article id="slot-c"
+      class="slot-c bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col border border-slate-200 relative">
+
+      <!-- Label Nama Anggota -->
+      <div class="absolute top-4 left-0 right-0 z-10 flex justify-center">
+        <span class="bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded shadow-md tracking-wide">
+          Muhammad Finlandia Rahman Mawlaa
+        </span>
+      </div>
+
+      <!-- Gambar Produk (Diperbesar) -->
+      <figure class="h-64 bg-slate-50 flex items-center justify-center p-4">
+        <img src="image/Laptop.jfif" alt="Laptop Ultrabook Layar Tipis"
+          class="h-full w-full object-contain drop-shadow-lg rounded-lg">
+      </figure>
+
+      <!-- Konten Card -->
+      <div class="p-5 flex flex-col flex-grow">
+        <!-- Nama Produk -->
+        <h2 class="text-xl font-bold text-slate-800 mb-1">Ultrabook Slim</h2>
+
+        <!-- Harga -->
+        <p class="text-lg font-bold text-indigo-600 mb-3">Rp 12.500.000</p>
+
+        <!-- Rating Bintang, Ulasan, dan Terjual -->
+        <div class="flex items-center gap-2 mb-3 text-sm">
+          <!-- Bintang -->
+          <div class="flex text-amber-400">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+          </div>
+          <!-- Angka Rating -->
+          <span class="font-semibold text-slate-700">4.6</span>
+          <!-- Jumlah Ulasan -->
+          <span class="text-slate-500">| 137 Ulasan</span>
+          <!-- Jumlah Terjual -->
+          <span class="text-slate-500">| 249 Terjual</span>
+        </div>
+
+        <!-- Deskripsi Singkat -->
+        <p class="text-sm text-slate-600 leading-relaxed flex-grow">
+          Laptop ringan dengan layar bezel tipis dan performa tinggi. Cocok untuk produktivitas kerja dan desain grafis
+          sehari-hari.
+        </p>
+
+        <!-- Tombol Beli -->
+        <button
+          class="mt-4 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+          Beli Sekarang
+        </button>
+      </div>
     </article>
-
 
     <!-- ===================================================================== -->
     <!-- SLOT D: ZUKOVSKI TANGGUH DIRGANTARA                                   -->
-    <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
     <article id="slot-d"
       class="slot-d relative min-h-[700px] flex flex-col bg-slate-900 text-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-900/20 hover:-translate-y-2 transition-all duration-300 ease-in-out border border-slate-700 group"
@@ -470,13 +487,173 @@
       </div>
     </article>
 
+    <!-- ===================================================================== -->
+    <!-- SLOT E: Visqya Pebriola Assyura                                       -->
+    <!-- ===================================================================== -->
+    <article id="slot-e"
+      class="slot-e min-h-[700px] bg-[#eaf4fc] rounded-[20px] overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 border border-blue-100/90 flex flex-col relative group transition-all duration-300">
 
-    <!-- ===================================================================== -->
-    <!-- SLOT E: [NAMA ANGGOTA 5]                                              -->
-    <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
-    <!-- ===================================================================== -->
-    <article id="slot-e" class="slot-e border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
-      Slot E
+      <!-- Label nama anggota -->
+      <div class="absolute top-4 left-0 right-0 z-10 flex">
+        <span class="bg-[#f4a8c1] text-white text-xs font-semibold px-3 py-1 shadow-md tracking-wide">
+          Visqya Pebriola Assyura
+        </span>
+      </div>
+
+      <!-- GAMBAR PRODUK -->
+      <figure
+        class="w-full h-90 bg-white flex items-center justify-center overflow-hidden p-6 border-b border-blue-100/80 relative">
+        <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-out"
+          src="images/huawei.jpg" alt="HUAWEI WATCH GT 5" />
+      </figure>
+
+      <!-- INFORMASI PRODUK -->
+      <div class="p-5 sm:p-6 flex flex-col gap-4 flex-grow text-[#1e2e4f]">
+
+        <!-- IDENTITAS PRODUK -->
+        <header>
+
+          <!-- Badges -->
+          <div class="flex items-center gap-2 mb-2.5">
+            <span class="px-3 py-1 rounded-lg text-xs font-semibold bg-[#f4a8c1] text-white shadow-sm">
+              Bestseller
+            </span>
+
+            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-white text-[#28477E] border border-blue-200">
+              Ready Stock
+            </span>
+          </div>
+
+          <!-- Brand & Nama Produk -->
+          <h2 class="text-xl sm:text-2xl font-extrabold text-[#1e2e4f] tracking-tight leading-tight mt-0.5"
+            title="HUAWEI WATCH GT 5">
+            HUAWEI WATCH GT 5
+          </h2>
+
+          <!-- Deskripsi Produk -->
+          <p class="text-xs sm:text-sm text-[#1e2e4f]/80 leading-relaxed mt-2 text-justify">
+            Smartwatch dengan desain premium, layar jernih, fitur pemantauan kesehatan dan olahraga,
+            serta daya tahan baterai yang panjang.
+          </p>
+        </header>
+
+        <!-- FITUR UTAMA PRODUK -->
+        <section class="grid grid-cols-3 gap-2">
+
+          <div
+            class="bg-white rounded-lg p-2.5 text-center border border-[#f4a8c1] shadow-md flex flex-col justify-center">
+            <span class="text-xs sm:text-xs font-bold text-[#28477E] leading-tight">
+              AMOLED
+            </span>
+            <span class="text-[10px] text-[#1e2e4f]/70 font-medium mt-0.5">
+              Display
+            </span>
+          </div>
+
+          <div
+            class="bg-white rounded-lg p-2.5 text-center border border-[#f4a8c1] shadow-md flex flex-col justify-center">
+            <span class="text-xs sm:text-sm font-bold text-[#28477E] leading-tight">
+              14 Days
+            </span>
+            <span class="text-[10px] text-[#1e2e4f]/70 font-medium mt-0.5">
+              Battery
+            </span>
+          </div>
+
+          <div
+            class="bg-white rounded-lg p-2.5 text-center border border-[#f4a8c1] shadow-md flex flex-col justify-center">
+            <span class="text-xs sm:text-sm font-bold text-[#28477E] leading-tight">
+              5 ATM
+            </span>
+            <span class="text-[10px] text-[#1e2e4f]/70 font-medium mt-0.5">
+              Water Resistant
+            </span>
+          </div>
+
+        </section>
+
+        <!-- HARGA DAN RATING -->
+        <section class="pt-1">
+
+          <!-- Harga -->
+          <div>
+            <p class="text-[11px] text-[#1e2e4f]/60 font-medium mb-0.5">
+              Harga Resmi
+            </p>
+
+            <span class="text-2xl font-black text-[#1e2e4f] tracking-tight">
+              Rp3.499.000
+            </span>
+          </div>
+
+          <!-- Rating -->
+          <div class="flex items-center gap-2 mt-2">
+            <div class="text-amber-400 text-sm tracking-wider" aria-hidden="true">
+              ★★★★★
+            </div>
+
+            <span class="text-sm font-semibold text-[#1e2e4f]">
+              4.9
+            </span>
+
+            <span class="text-sm text-[#1e2e4f]/60">
+              (1.8k reviews)
+            </span>
+          </div>
+
+        </section>
+
+        <!-- ULASAN PEMBELI -->
+        <hr class="border-0 border-t-[2px] border-[#f4a8c1]">
+
+        <section>
+
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-sm font-bold text-[#1e2e4f]">
+              Ulasan Pembeli
+            </h3>
+
+            <span class="text-amber-400 text-xs tracking-wider" aria-hidden="true">
+              ★★★★★
+            </span>
+          </div>
+
+          <p class="text-xs text-[#1e2e4f]/75 leading-relaxed">
+            “Desainnya elegan dan layarnya sangat jernih. Nyaman dipakai sehari-hari.”
+          </p>
+
+          <p class="text-[11px] text-[#1e2e4f]/50 font-medium mt-1">
+            — Andi, Pembeli Terverifikasi
+          </p>
+
+        </section>
+
+        <!-- TOMBOL AKSI -->
+        <footer class="flex items-center gap-2 mt-auto pt-2">
+
+          <!-- Tombol Beli Sekarang -->
+          <button type="button"
+            class="flex-1 bg-[#ffffff] hover:bg-[#f4a8c1] text-[#28477E] hover:text-white text-sm font-semibold py-3 px-4 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-[#28477E]/50 focus:ring-offset-2 transition-all duration-200">
+            Beli Sekarang
+          </button>
+
+          <!-- Tombol Wishlist -->
+          <button type="button"
+            class="w-11 h-11 flex-shrink-0 flex items-center justify-center bg-white hover:bg-[#f4a8c1] text-[#28477E] hover:text-white border border-blue-200 rounded-xl shadow-xs hover:scale-105 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#28477E]/50 focus:ring-offset-2 transition-all duration-200"
+            aria-label="Tambah ke wishlist">
+
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+              </path>
+
+            </svg>
+          </button>
+
+        </footer>
+
+      </div>
     </article>
 
   </main>
