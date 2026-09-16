@@ -76,107 +76,161 @@
     <!-- SLOT A: Fil Ardhi - Ayam Geprek Anak IT                              -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
-    <article id="slot-a" class="slot-a min-h-[700px] bg-slate-100/50 flex flex-col items-center justify-center py-6 px-2 rounded-xl">
-      <!-- Card Katalog Produk Online -->
-      <article class="group bg-white text-slate-800 w-full max-w-[290px] rounded-2xl shadow-md hover:shadow-2xl border border-slate-100 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 flex flex-col">
-        
-        <!-- Foto Produk & Badges (Latar Bersih) -->
-        <figure class="relative w-full h-52 bg-white flex items-center justify-center p-3 overflow-hidden border-b border-slate-100">
-          <!-- Badge Promo / Tagar -->
-          <div class="absolute top-3 left-3 z-10 flex flex-col gap-1 items-start">
-            <span class="bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm tracking-wide uppercase">
-              Promo Kilat
-            </span>
-            <span class="bg-amber-100 text-amber-800 text-[10px] font-semibold px-2 py-0.5 rounded-full">
-              🔥 Pedas Level IT
-            </span>
-          </div>
+    <article id="slot-a"
+      class="slot-a min-h-[700px] bg-slate-100/50 flex flex-col items-center justify-center py-6 px-2 gap-3.5 rounded-xl">
+      
+      <!-- Badge Nama Pemilik Slot A -->
+      <div class="flex items-center gap-1.5 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-md">
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+        </svg>
+        <span>Slot A: Fil Ardhi</span>
+      </div>
 
-          <!-- Tombol Favorit Interaktif -->
-          <button type="button" aria-label="Simpan ke favorit" class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-slate-50/90 hover:bg-white shadow-sm flex items-center justify-center text-slate-400 hover:text-red-500 hover:scale-110 active:scale-95 transition-all">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-          </button>
-
-          <!-- Gambar Produk Ayam Geprek dengan Latar Putih Bersih -->
-          <img 
-            src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&auto=format&fit=crop&q=80" 
-            alt="Ayam Geprek Anak IT dengan Sambal Pedas Gurih" 
-            class="w-full h-full object-contain object-center transform group-hover:scale-105 transition-transform duration-300"
-            loading="lazy"
-          />
+      <!-- PRODUK 1: Ayam Geprek Sambal IT -->
+      <article
+        class="group bg-white text-slate-800 w-full max-w-[290px] rounded-xl shadow-md hover:shadow-lg border border-slate-200/80 overflow-hidden transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
+        <!-- Foto Produk 1 -->
+        <figure class="relative w-full h-28 bg-amber-50 overflow-hidden border-b border-slate-100">
+          <span class="absolute top-2 left-2 z-10 bg-red-500 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase shadow-sm">
+            Promo Kilat
+          </span>
+          <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&auto=format&fit=crop&q=80"
+            alt="Ayam Geprek Anak IT"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy" />
         </figure>
 
-        <!-- Informasi Produk -->
-        <div class="p-4 flex flex-col flex-grow justify-between gap-3">
-          
-          <!-- Identitas Produk & Rating -->
-          <header class="flex flex-col gap-1">
-            <!-- Label Kategori & Rating -->
-            <div class="flex items-center justify-between text-xs">
-              <span class="text-amber-700 font-semibold tracking-wide uppercase text-[10px] bg-amber-50 px-2 py-0.5 rounded">
-                Menu Kuliner
-              </span>
-              <!-- Rating Bintang -->
-              <div class="flex items-center gap-1 text-amber-400">
-                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                </svg>
-                <span class="text-slate-800 font-bold text-xs">4.9</span>
-                <span class="text-slate-400 text-[10px]">(1.2k review)</span>
-              </div>
-            </div>
-
-            <!-- Nama Produk -->
-            <h3 class="text-lg font-bold text-slate-900 group-hover:text-amber-600 transition-colors line-clamp-1" title="Ayam Geprek Anak IT">
-              Ayam Geprek Anak IT
-            </h3>
-          </header>
-
-          <!-- Deskripsi Singkat Produk -->
-          <section>
-            <p class="text-slate-500 text-xs leading-relaxed line-clamp-2">
-              Ayam krispi gurih dengan ulekan sambal bawang segar level koding. Solusi kenyang anti-ngantuk buat booster begadang dan debugging error!
-            </p>
-          </section>
-
-          <!-- Harga Produk & Diskon -->
-          <section class="flex items-baseline justify-between pt-2 border-t border-slate-100">
-            <div>
-              <p class="text-[10px] text-slate-400 font-medium">Harga Promo</p>
-              <div class="flex items-center gap-1.5">
-                <span class="text-xl font-extrabold text-amber-600 tracking-tight">10k</span>
-                <span class="text-xs text-slate-400 line-through">Rp 15.000</span>
-              </div>
-            </div>
-            <span class="text-[10px] font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
-              Hemat 33%
+        <!-- Informasi Produk 1 -->
+        <div class="p-3 flex flex-col gap-1.5">
+          <div class="flex items-center justify-between text-xs">
+            <span class="text-amber-700 font-bold uppercase text-[9px] bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200/60">
+              Makanan
             </span>
-          </section>
-
-          <!-- Tombol Aksi (Interaktif) -->
-          <footer class="flex items-center gap-2 pt-1">
-            <button 
-              type="button" 
-              class="flex-1 bg-amber-500 hover:bg-amber-600 active:scale-95 text-white font-semibold text-xs py-2.5 px-3 rounded-xl shadow-md hover:shadow-amber-500/30 transition-all duration-200 flex items-center justify-center gap-1.5">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            <div class="flex items-center gap-1 text-amber-400">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
               </svg>
-              <span>Beli Sekarang</span>
-            </button>
-            <button 
-              type="button" 
-              aria-label="Tambah ke keranjang"
-              class="p-2.5 text-slate-600 hover:text-amber-600 bg-slate-100 hover:bg-amber-50 active:scale-95 rounded-xl border border-slate-200 hover:border-amber-200 transition-all duration-200 flex items-center justify-center">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-            </button>
-          </footer>
+              <span class="text-slate-800 font-bold text-xs">4.9</span>
+            </div>
+          </div>
 
+          <h3 class="text-sm font-bold text-slate-900 group-hover:text-amber-600 transition-colors line-clamp-1" title="Ayam Geprek Anak IT">
+            Ayam Geprek Sambal IT
+          </h3>
+          <p class="text-slate-500 text-[11px] line-clamp-1">
+            Ayam krispi gurih sambal bawang level koding.
+          </p>
+
+          <div class="flex items-center justify-between pt-1 border-t border-slate-100">
+            <div>
+              <span class="text-base font-extrabold text-amber-600">10k</span>
+              <span class="text-[10px] text-slate-400 line-through ml-1">15k</span>
+            </div>
+            <button type="button"
+              class="bg-amber-500 hover:bg-amber-600 active:scale-95 text-white font-semibold text-[11px] py-1 px-2.5 rounded-lg shadow-sm transition">
+              Beli
+            </button>
+          </div>
         </div>
       </article>
+
+      <!-- PRODUK 2: Kentang Krispi Full-Stack -->
+      <article
+        class="group bg-white text-slate-800 w-full max-w-[290px] rounded-xl shadow-md hover:shadow-lg border border-slate-200/80 overflow-hidden transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
+        <!-- Foto Produk 2 -->
+        <figure class="relative w-full h-28 bg-orange-50 overflow-hidden border-b border-slate-100">
+          <span class="absolute top-2 left-2 z-10 bg-orange-500 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase shadow-sm">
+            Favorit
+          </span>
+          <img src="https://images.unsplash.com/photo-1576107232684-1279f3908594?w=600&auto=format&fit=crop&q=80"
+            alt="Kentang Krispi Full-Stack"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy" />
+        </figure>
+
+        <!-- Informasi Produk 2 -->
+        <div class="p-3 flex flex-col gap-1.5">
+          <div class="flex items-center justify-between text-xs">
+            <span class="text-orange-700 font-bold uppercase text-[9px] bg-orange-50 px-1.5 py-0.5 rounded border border-orange-200/60">
+              Camilan
+            </span>
+            <div class="flex items-center gap-1 text-amber-400">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <span class="text-slate-800 font-bold text-xs">4.8</span>
+            </div>
+          </div>
+
+          <h3 class="text-sm font-bold text-slate-900 group-hover:text-orange-600 transition-colors line-clamp-1" title="Kentang Krispi Full-Stack">
+            Kentang Krispi Full-Stack
+          </h3>
+          <p class="text-slate-500 text-[11px] line-clamp-1">
+            Kentang goreng renyah bumbu keju gurih mantap.
+          </p>
+
+          <div class="flex items-center justify-between pt-1 border-t border-slate-100">
+            <div>
+              <span class="text-base font-extrabold text-orange-600">8k</span>
+              <span class="text-[10px] text-slate-400 line-through ml-1">12k</span>
+            </div>
+            <button type="button"
+              class="bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-semibold text-[11px] py-1 px-2.5 rounded-lg shadow-sm transition">
+              Beli
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUK 3: Es Teh Jumbo Anti-Bug -->
+      <article
+        class="group bg-white text-slate-800 w-full max-w-[290px] rounded-xl shadow-md hover:shadow-lg border border-slate-200/80 overflow-hidden transition-all duration-300 hover:-translate-y-0.5 flex flex-col">
+        <!-- Foto Produk 3 -->
+        <figure class="relative w-full h-28 bg-emerald-50 overflow-hidden border-b border-slate-100">
+          <span class="absolute top-2 left-2 z-10 bg-emerald-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase shadow-sm">
+            Best Seller
+          </span>
+          <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&auto=format&fit=crop&q=80"
+            alt="Es Teh Manis Jumbo Anti-Bug"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy" />
+        </figure>
+
+        <!-- Informasi Produk 3 -->
+        <div class="p-3 flex flex-col gap-1.5">
+          <div class="flex items-center justify-between text-xs">
+            <span class="text-emerald-700 font-bold uppercase text-[9px] bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200/60">
+              Minuman
+            </span>
+            <div class="flex items-center gap-1 text-amber-400">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <span class="text-slate-800 font-bold text-xs">5.0</span>
+            </div>
+          </div>
+
+          <h3 class="text-sm font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-1" title="Es Teh Jumbo Anti-Bug">
+            Es Teh Jumbo Anti-Bug
+          </h3>
+          <p class="text-slate-500 text-[11px] line-clamp-1">
+            Teh melati manis segar pelepas dahaga fix bug!
+          </p>
+
+          <div class="flex items-center justify-between pt-1 border-t border-slate-100">
+            <div>
+              <span class="text-base font-extrabold text-emerald-600">5k</span>
+              <span class="text-[10px] text-slate-400 line-through ml-1">7k</span>
+            </div>
+            <button type="button"
+              class="bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-semibold text-[11px] py-1 px-2.5 rounded-lg shadow-sm transition">
+              Beli
+            </button>
+          </div>
+        </div>
+      </article>
+
     </article>
 
 
@@ -348,11 +402,72 @@
 
 
     <!-- ===================================================================== -->
-    <!-- SLOT D: [NAMA ANGGOTA 4]                                              -->
+    <!-- SLOT D: ZUKOVSKI TANGGUH DIRGANTARA                                   -->
     <!-- Kerjakan desain kartumu di dalam tag <article> ini                   -->
     <!-- ===================================================================== -->
-    <article id="slot-d" class="slot-d border-2 border-dashed border-slate-300 rounded-xl min-h-[700px] flex items-center justify-center text-slate-400 text-lg font-semibold">
-      Slot D
+    <article id="slot-d"
+      class="slot-d relative min-h-[700px] flex flex-col bg-slate-900 text-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-900/20 hover:-translate-y-2 transition-all duration-300 ease-in-out border border-slate-700 group"
+      style="font-family: 'Poppins', sans-serif;">
+      <div class="absolute top-4 left-1/2 -translate-x-1/2 z-10 w-max">
+        <span class="bg-[#28477E] text-white text-xs font-semibold px-3 py-1 rounded shadow-md">Zukovski Tangguh
+          Dirgantara</span>
+      </div>
+
+      <!-- BAGIAN GAMBAR PRODUK -->
+      <figure class="w-full flex-grow overflow-hidden relative bg-slate-800">
+        <img class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIGtOeuc2HZihAlcn2SNjzsJE0TyshVTWPRl_0_GLlfc_iQdBiLiUsrWY&s=10"
+          alt="Samsung Galaxy S25 FE" />
+      </figure>
+
+      <!-- INFORMASI PRODUK -->
+      <div class="p-6 flex flex-col justify-between h-auto gap-4">
+        <header>
+          <div class="flex items-center gap-2 mb-3">
+            <span
+              class="px-2 py-1 rounded text-[10px] font-bold bg-[#28477E] text-white uppercase tracking-wider">Tersedia</span>
+          </div>
+          <h3 class="font-bold text-xl truncate" title="Samsung Galaxy S25 FE">Galaxy S25 FE</h3>
+          <p class="text-sm text-slate-400 mt-2 line-clamp-3">Samsung Galaxy S25 FE adalah smartphone premium-value
+            dengan desain elegan, performa tinggi, dan fitur Galaxy AI terbaru.</p>
+        </header>
+
+        <!-- HARGA DAN RATING -->
+        <section class="mt-2">
+          <!-- Bagian Harga Produk -->
+          <div>
+            <span class="text-3xl font-extrabold text-blue-400">Rp10.500.000</span>
+          </div>
+
+          <!-- Bagian Rating & Ulasan -->
+          <div class="flex items-center mt-3">
+            <!-- Ikon Bintang Rating -->
+            <div class="flex text-yellow-400 text-lg tracking-widest">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <!-- Teks Jumlah Ulasan -->
+            <span class="text-sm ml-2 text-slate-400">4.9 (12k reviews)</span>
+          </div>
+        </section>
+
+        <footer class="mt-6 flex gap-3">
+          <!-- Tombol Utama (Beli) -->
+          <button
+            class="flex-1 bg-[#28477E] hover:bg-blue-800 text-white font-bold py-3 rounded-lg transition-colors duration-200 shadow-md text-base">
+            Beli Sekarang
+          </button>
+          <!-- Tombol Tambahan (Ikon Favorit/Wishlist) -->
+          <button
+            class="w-12 h-12 flex items-center justify-center bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors duration-200"
+            aria-label="Simpan">
+            <svg class="w-6 h-6 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+              </path>
+            </svg>
+          </button>
+        </footer>
+      </div>
     </article>
 
 
