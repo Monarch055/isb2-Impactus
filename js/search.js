@@ -9,24 +9,22 @@
  * halaman hanya akan menampilkan card yang judulnya sesuai dengan teks yang diketik.
  *
  * ------------------------------------------------------------------------------
- * 📝 BAGIAN 1: TUGAS HTML & CSS (Di file index.html)
+ * 📝 BAGIAN 1: PANDUAN HTML & CSS (Di file index.html)
  * ------------------------------------------------------------------------------
  * 📍 LOKASI DI index.html:
  *    Buka file index.html. Di bagian bawah tag <header>, temukan komentar:
  *    <!-- [SLOT HTML FITUR 4: SEARCH BAR & COUNTER PRODUK] -->
  *    di dalam tag <div id="search-section" ...>.
  *
- * 🏷️ REKOMENDASI STRUKTUR HTML YANG PERLU KAMU BUAT:
- *    Tambahkan tag <input> search bar berikut di dalam slot tersebut:
- *
- *    <div class="relative flex-1 max-w-md">
- *      <input 
- *        type="text" 
- *        id="search-input" 
- *        placeholder="🔍 Cari produk (contoh: ayam, headphone, ultrabook, galaxy)..." 
- *        class="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm transition"
- *      />
- *    </div>
+ * 💡 IDE BENTUK & STYLING HTML/CSS (Bebas Berkreasi!):
+ *    - Elemen Wajib: Buat tag <input type="text"> yang memiliki atribut id="search-input".
+ *    - Teks Petunjuk (Placeholder): Tuliskan kalimat bantuan yang jelas, misalnya `placeholder="Cari produk impianmu..."`.
+ *    - Ide Tampilan & Desain:
+ *      * Bentuk Modern Pill: Input dibuat rounded penuh (`rounded-full px-5 py-2.5`) dengan border abu-abu halus (`border border-slate-200 dark:border-slate-800`).
+ *      * Bentuk Kotak Elegan: Input kotak melengkung (`rounded-xl px-4 py-2.5`) dengan lebar yang nyaman di mata (misal dibatasi `max-w-md w-full`).
+ *      * Efek Fokus (Focus Ring): Berikan highlight saat kolom diklik pengguna, seperti `focus:ring-2 focus:ring-indigo-500 focus:outline-none`.
+ *      * Hiasan Ikon: Kamu bisa menambahkan ikon kaca pembesar (🔍 atau ikon SVG search) di dalam atau di samping input.
+ *      * (Opsional Tambahan): Tambahkan teks counter di samping input (misal tag <span> dengan id="product-count") untuk menampilkan jumlah produk yang ditemukan.
  *
  * ------------------------------------------------------------------------------
  * 💻 BAGIAN 2: TUGAS JAVASCRIPT (Di file ini: js/search.js)
@@ -35,22 +33,22 @@
  * 1. Tunggu DOM siap: document.addEventListener('DOMContentLoaded', () => { ... })
  * 2. Ambil elemen input pencarian:
  *    const searchInput = document.getElementById('search-input');
- * 3. Pasang event listener 'input' pada elemen search input (terpicu saat mengetik):
+ * 3. Pasang event listener 'input' pada elemen input tersebut (event 'input' akan otomatis terpicu setiap ada huruf baru yang diketik):
  *    searchInput.addEventListener('input', (event) => { ... });
- * 4. Di dalam fungsi event listener:
- *    a. Ambil nilai ketikan pengguna, ubah ke huruf kecil dan hapus spasi berlebih:
+ * 4. Di dalam fungsi callback input:
+ *    a. Ambil nilai ketikan pengguna, ubah ke huruf kecil dan buang spasi ujung:
  *       const keyword = event.target.value.toLowerCase().trim();
- *    b. Ambil semua elemen kartu produk di halaman:
+ *    b. Ambil seluruh elemen kartu produk di halaman:
  *       const cards = document.querySelectorAll('.product-card');
  *    c. Loop setiap kartu dengan .forEach():
  *       cards.forEach((card) => {
- *         // Ambil judul produk di dalam kartu
+ *         // Ambil teks judul produk di dalam kartu
  *         const title = card.querySelector('.product-title').textContent.toLowerCase();
- *         // Periksa apakah judul mengandung kata kunci yang diketik
+ *         // Periksa kecocokan menggunakan method .includes()
  *         if (title.includes(keyword)) {
- *           card.classList.remove('hidden'); // Tampilkan jika cocok
+ *           card.classList.remove('hidden'); // Munculkan kartu jika cocok
  *         } else {
- *           card.classList.add('hidden');    // Sembunyikan jika tidak cocok
+ *           card.classList.add('hidden');    // Sembunyikan kartu jika tidak cocok
  *         }
  *       });
  *

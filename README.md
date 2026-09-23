@@ -26,6 +26,8 @@ Website ini merupakan kelanjutan dari tugas Week 2 (CSS Grid & Tailwind CSS) yan
 4. **Search / Filter Realtime (`js/search.js`)**: Mencari produk berdasarkan judul/kategori secara langsung saat mengetik di search bar.
 5. **Popup Modal Detail (`js/modal.js`)**: Menampilkan modal pop-up dengan detail lengkap saat tombol detail diklik.
 6. **Form Tambah Produk (`js/create.js`)**: Menambahkan kartu produk baru secara dinamis ke dalam katalog.
+7. **Translate EN/ID (`js/language.js`)**: Mengubah bahasa teks judul/deskripsi kartu secara dinamis menggunakan Object JS dan `.textContent`.
+8. **Random Color Card (`js/color.js`)**: Mengubah warna latar belakang salah satu kartu secara acak saat tombol diklik.
 
 ---
 
