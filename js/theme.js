@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeIcon = document.getElementById('theme-icon');
   const themeText = document.getElementById('theme-text');
 
-  // [Bonus] Cek localStorage saat halaman pertama dimuat
+  // Cek localStorage saat halaman pertama dimuat
   if (localStorage.getItem('theme') === 'dark') {
     document.documentElement.classList.add('dark');
     themeIcon.textContent = '☀️';
