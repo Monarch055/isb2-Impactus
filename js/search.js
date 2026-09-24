@@ -71,14 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const cards = document.querySelectorAll('.product-card');
 
             cards.forEach((card) => {
-                const titleElement = card.querySelector('.product-title');
-                if (titleElement) {
-                    const title = titleElement.textContent.toLowerCase();
-                    if (title.includes(keyword)) {
-                        card.classList.remove('hidden');
-                    } else {
-                        card.classList.add('hidden');
-                    }
+                const title = card.querySelector('.product-title').textContent.toLowerCase();
+                if (title.includes(keyword)) {
+                    cards.classList.remove('hidden');
+                }
+                else {
+                    cards.classList.add('hidden');
                 }
             });
         });
