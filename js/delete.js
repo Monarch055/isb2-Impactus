@@ -9,41 +9,41 @@
  * elemen card tersebut dari halaman ketika diklik menggunakan Manipulasi DOM.
  *
  * ------------------------------------------------------------------------------
- * 📝 BAGIAN 1: TUGAS HTML & CSS (Di file index.html)
+ * 📝 BAGIAN 1: PANDUAN HTML & CSS (Di file index.html)
  * ------------------------------------------------------------------------------
  * 📍 LOKASI DI index.html:
  *    Buka file index.html. Pada setiap kartu produk (Slot A sampai Slot E), temukan komentar:
  *    <!-- [SLOT KARTU ...: FITUR 3 (LIKE) & FITUR 2 (DELETE)] -->
  *    di dalam tag <div class="card-actions ...">.
  *
- * 🏷️ REKOMENDASI STRUKTUR HTML YANG PERLU KAMU BUAT:
- *    Tambahkan tag <button> berikut di dalam slot tersebut pada ke-5 kartu:
- *
- *    <button type="button" class="btn-delete flex items-center justify-center p-1 text-slate-400 hover:text-rose-600 transition active:scale-95" title="Hapus Produk">
- *      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
- *        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
- *      </svg>
- *    </button>
+ * 💡 IDE BENTUK & STYLING HTML/CSS (Bebas Berkreasi!):
+ *    - Elemen Wajib: Buat tag <button> yang memiliki class "btn-delete".
+ *    - Konten di Dalam Tombol:
+ *      * Bisa berupa ikon tempat sampah (SVG trash icon, emoji 🗑️), atau teks singkat "Hapus" / "Delete".
+ *    - Ide Tampilan & Desain:
+ *      * Bentuk: Tombol lingkaran kecil minimalis (`rounded-full p-1.5`), atau tombol kotak bersudut halus (`rounded-lg p-1`).
+ *      * Warna: Karena fungsinya menghapus (destructive action), berikan warna dasar abu-abu netral (`text-slate-400`), dan saat disentuh kursor (hover) berikan aksen merah/merah muda (`hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-950/40`).
+ *      * Tooltip: Tambahkan atribut `title="Hapus Kartu Ini"` agar pengguna tahu fungsinya saat mouse diarahkan ke tombol.
  *
  * ------------------------------------------------------------------------------
  * 💻 BAGIAN 2: TUGAS JAVASCRIPT (Di file ini: js/delete.js)
  * ------------------------------------------------------------------------------
  * 💡 ALUR LOGIKA / LANGKAH PENGERJAAN:
  * 1. Tunggu DOM siap: document.addEventListener('DOMContentLoaded', () => { ... })
- * 2. Ambil semua tombol hapus dengan class '.btn-delete':
+ * 2. Ambil semua tombol hapus yang memiliki class '.btn-delete':
  *    const deleteButtons = document.querySelectorAll('.btn-delete');
  * 3. Loop semua tombol hapus menggunakan .forEach():
  *    deleteButtons.forEach((button) => { ... });
  * 4. Pasang event listener 'click' pada masing-masing tombol:
  *    button.addEventListener('click', (event) => { ... });
- * 5. Di dalam fungsi event listener:
- *    a. Cegah event bubbling dengan event.stopPropagation().
- *    b. Temukan elemen kartu induk terdekat menggunakan method:
+ * 5. Di dalam fungsi callback klik:
+ *    a. Cegah klik tembus ke elemen kartu lain dengan: event.stopPropagation();
+ *    b. Cari pembungkus kartu produk induk terdekat ke atas menggunakan method:
  *       const card = button.closest('.product-card');
- *    c. (Opsional tapi bagus) Tampilkan konfirmasi dialog dengan:
- *       const setuju = confirm("Apakah Anda yakin ingin menghapus kartu ini?");
- *    d. Jika pengguna setuju (if (setuju)):
- *       - Hapus elemen kartu tersebut dari DOM menggunakan: card.remove();
+ *    c. (Sangat disarankan) Munculkan konfirmasi dengan confirm(), misalnya:
+ *       const yakin = confirm("Apakah Anda yakin ingin menghapus produk ini?");
+ *    d. Jika pengguna menyetujui konfirmasi tersebut:
+ *       - Hapus elemen kartu dari tampilan DOM menggunakan method: card.remove();
  *
  * ⚠️ KETENTUAN TEKNIS:
  * - Wajib gunakan 'const' atau 'let' (dilarang pakai 'var').
