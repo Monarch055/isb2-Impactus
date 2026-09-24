@@ -80,4 +80,30 @@
  */
 
 // Tulis kodemu di bawah sini:
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('modal-detail');
+    const btnClose = document.getElementById('btn-close-modal');
+    const detailButtons = document.querySelectorAll('.btn-detail');
 
+    detailButtons.forEach((btn) => {
+        btn.addEventListener('click', (event) => {
+            const card = btn.closest('.product-card');
+            const title = card.querySelector('.product-title').textContent;
+            const img = card.querySelector('figure img').src;
+            const desc = card.querySelector('.product-desc').textContent;
+            const price = card.querySelector('.product-price').textContent;
+
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-image').src = img;
+            document.getElementById('modal-desc').textContent = desc;
+            document.getElementById('modal-price').textContent = price;
+
+            modal.classList.remove('hidden');
+        });
+    });
+
+    btnClose.addEventListener('click', () => {
+        modal.classList.add('hidden');
+    });
+
+});
