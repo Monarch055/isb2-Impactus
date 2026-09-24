@@ -12,7 +12,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class', // Mendukung toggle class 'dark' pada tag <html>
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -44,7 +44,6 @@
       font-family: 'Inter', sans-serif;
     }
 
-    /* GRID CONTAINER UTAMA - Responsif & Rapi untuk 5 Kartu */
     .grid-container {
       display: grid;
       grid-template-columns: 1fr;
@@ -87,7 +86,6 @@
     <div
       class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
 
-      <!-- Identitas Tim & Judul Website -->
       <div>
         <div class="flex items-center gap-2 mb-1">
           <span
@@ -108,33 +106,28 @@
 
       <!-- ===================================================================== -->
       <!-- [SLOT HTML TOMBOL AKSI HEADER]                                        -->
-      <!-- Tempat untuk tombol Dark Mode (Fitur 5), Tambah Produk (Fitur 1),     -->
-      <!-- Translate EN/ID (Fitur 7), dan Random Color (Fitur 8)                 -->
       <!-- ===================================================================== -->
       <div id="header-actions" class="flex flex-wrap items-center gap-3 self-start md:self-center">
-        <!-- [FITUR 5] Zukovski - Tombol Dark Mode / Light Mode -->
-        <button id="btn-theme-toggle" class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 rounded-full px-4 py-2 text-xs font-semibold shadow-sm hover:shadow-md active:scale-95 transition-all cursor-pointer">
+        <!-- [FITUR 5] Tombol Dark Mode / Light Mode -->
+        <button id="btn-theme-toggle"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 rounded-full px-4 py-2 text-xs font-semibold shadow-sm hover:shadow-md active:scale-95 transition-all cursor-pointer">
           <span id="theme-icon">🌙</span>
           <span id="theme-text">Dark Mode</span>
         </button>
-        <!-- [FITUR 1] Anggota pemegang Fitur 1: Buat tombol Tambah Produk (Create) di sini -->
-        <!-- [FITUR 7] Anggota pemegang Fitur 7: Buat tombol Translate EN/ID di sini -->
-        <!-- [FITUR 8] Anggota pemegang Fitur 8: Buat tombol Random Color di sini -->
+
+        <!-- [FITUR 7] Muhammad Finlandia - Tombol Translate EN/ID -->
+        <button id="btn-translate"
+          class="flex items-center gap-2 bg-white dark:bg-gray-900 text-gray-500 dark:text-slate-200 border border-slate-200 dark:border-slate-700 rounded-full px-4 py-2 text-xs font-semibold shadow-sm hover:shadow-md hover:border-indigo-400 active:scale-95 transition-all cursor-pointer">
+          <span>🌐</span>
+          <span id="translate-label">Translate (EN)</span>
+        </button>
       </div>
     </div>
 
-    <!-- ======================================================================= -->
-    <!-- [SLOT HTML FITUR 4: SEARCH BAR & COUNTER PRODUK]                        -->
-    <!-- Tempat untuk input pencarian produk (search bar) dan info counter       -->
-    <!-- ======================================================================= -->
+    <!-- [SLOT HTML FITUR 4: SEARCH BAR] -->
     <div id="search-section" class="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-      <div class="relative flex-1 max-w-md">
-        <input type="text" id="search-input"
-          placeholder="🔍 Cari produk (contoh: ayam atau nama produk yang ditampilkan)..."
-          class="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm transition" />
-      </div>
+      <!-- [FITUR 4] Search bar di sini -->
     </div>
-
   </header>
 
 
@@ -150,32 +143,26 @@
       class="product-card group relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full"
       data-author="Fil Ardhi" data-id="1">
 
-      <!-- Baris Atas: Badge Pembuat & Slot Tombol Aksi (Like & Delete) -->
       <div class="absolute top-3 left-3 right-3 z-10 flex items-center justify-between pointer-events-none">
         <span
           class="pointer-events-auto bg-amber-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm tracking-wide">
           Fil Ardhi
         </span>
 
-        <!-- ================================================================= -->
-        <!-- [SLOT KARTU A: FITUR 3 (LIKE) & FITUR 2 (DELETE)]                 -->
-        <!-- Letakkan tombol Like (.btn-like) dan tombol Hapus (.btn-delete)   -->
-        <!-- di dalam div pembungkus di bawah ini:                             -->
-        <!-- ================================================================= -->
         <div
           class="card-actions pointer-events-auto flex items-center gap-1.5 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xs p-1 rounded-full shadow-sm border border-slate-100 dark:border-slate-800">
-          <!-- [FITUR 3] Tombol Like di sini -->
-           <button type="button" class="btn-like flex items-center gap-1 px-2 py-0.5 text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-rose-500 rounded-full transition-colors cursor-pointer" aria-label="Suka">
+          <button type="button"
+            class="btn-like flex items-center gap-1 px-2 py-0.5 text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-rose-500 rounded-full transition-colors cursor-pointer"
+            aria-label="Suka">
             <svg class="w-4 h-4 like-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
             </svg>
             <span class="like-count">4631</span>
           </button>
-          <!-- [FITUR 2] Tombol Hapus di sini -->
         </div>
       </div>
 
-      <!-- Gambar Produk -->
       <figure
         class="h-48 sm:h-52 w-full bg-amber-50/50 dark:bg-slate-800/40 flex items-center justify-center p-3 overflow-hidden border-b border-slate-100 dark:border-slate-800 relative">
         <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&auto=format&fit=crop&q=80"
@@ -184,7 +171,6 @@
           loading="lazy" />
       </figure>
 
-      <!-- Informasi Produk -->
       <div class="p-4 flex flex-col flex-grow justify-between gap-3">
         <header class="flex flex-col gap-1">
           <div class="flex items-center justify-between text-xs">
@@ -206,22 +192,22 @@
             title="Ayam Geprek Anak IT">
             Ayam Geprek Anak IT
           </h3>
-          <span class="text-[10px] text-amber-600 dark:text-amber-400 font-medium">🔥 Level Pedas Koding</span>
+          <span class="product-subtitle text-[10px] text-amber-600 dark:text-amber-400 font-medium">🔥 Level
+            Pedas Koding</span>
         </header>
 
         <p class="product-desc text-slate-500 dark:text-slate-400 text-xs leading-relaxed line-clamp-2">
-          Ayam krispi gurih dengan sambal bawang segar level koding. Solusi kenyang anti-ngantuk buat booster begadang
-          dan debugging error!
+          Ayam krispi gurih dengan sambal bawang segar level koding. Solusi kenyang anti-ngantuk buat booster
+          begadang dan debugging error!
         </p>
 
-        <!-- Harga -->
         <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-baseline justify-between">
           <div>
-            <p class="text-[10px] text-slate-400 font-medium">Harga Promo</p>
+            <p class="text-[10px] text-slate-400 font-medium price-label">Harga Promo</p>
             <div class="flex items-center gap-1.5">
               <span class="product-price text-lg font-extrabold text-amber-600 dark:text-amber-400 tracking-tight">Rp
                 10.000</span>
-              <span class="text-xs text-slate-400 line-through">Rp 15.000</span>
+              <span class="text-xs text-slate-400 line-through price-old">Rp 15.000</span>
             </div>
           </div>
           <span
@@ -230,16 +216,11 @@
           </span>
         </div>
 
-        <!-- Tombol Aksi Bawah -->
         <footer class="flex items-center gap-2 pt-1">
           <button type="button"
-            class="flex-1 bg-amber-500 hover:bg-amber-600 active:scale-95 text-white font-semibold text-xs py-2 px-3 rounded-xl shadow-sm transition">
+            class="buy-btn flex-1 bg-amber-500 hover:bg-amber-600 active:scale-95 text-white font-semibold text-xs py-2 px-3 rounded-xl shadow-sm transition">
             Beli Sekarang
           </button>
-          <!-- =============================================================== -->
-          <!-- [SLOT KARTU A: FITUR 6 (MODAL DETAIL)]                          -->
-          <!-- Letakkan tombol Detail (.btn-detail) di sini                    -->
-          <!-- =============================================================== -->
         </footer>
       </div>
     </article>
@@ -252,32 +233,26 @@
       class="product-card group relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full"
       data-author="Nelson Saputra" data-id="2">
 
-      <!-- Baris Atas: Badge Pembuat & Slot Tombol Aksi (Like & Delete) -->
       <div class="absolute top-3 left-3 right-3 z-10 flex items-center justify-between pointer-events-none">
         <span
           class="pointer-events-auto bg-orange-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm tracking-wide">
           Nelson Saputra
         </span>
 
-        <!-- ================================================================= -->
-        <!-- [SLOT KARTU B: FITUR 3 (LIKE) & FITUR 2 (DELETE)]                 -->
-        <!-- Letakkan tombol Like (.btn-like) dan tombol Hapus (.btn-delete)   -->
-        <!-- di dalam div pembungkus di bawah ini:                             -->
-        <!-- ================================================================= -->
         <div
           class="card-actions pointer-events-auto flex items-center gap-1.5 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xs p-1 rounded-full shadow-sm border border-slate-100 dark:border-slate-800">
-          <!-- [FITUR 3] Tombol Like di sini -->
-          <button type="button" class="btn-like flex items-center gap-1 px-2 py-0.5 text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-rose-500 rounded-full transition-colors cursor-pointer" aria-label="Suka">
+          <button type="button"
+            class="btn-like flex items-center gap-1 px-2 py-0.5 text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-rose-500 rounded-full transition-colors cursor-pointer"
+            aria-label="Suka">
             <svg class="w-4 h-4 like-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
             </svg>
             <span class="like-count">2345</span>
           </button>
-          <!-- [FITUR 2] Tombol Hapus di sini -->
         </div>
       </div>
 
-      <!-- Gambar Produk -->
       <figure
         class="h-48 sm:h-52 w-full bg-slate-50 dark:bg-slate-800/40 flex items-center justify-center p-3 overflow-hidden border-b border-slate-100 dark:border-slate-800 relative">
         <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1170&auto=format&fit=crop"
@@ -286,7 +261,6 @@
           loading="lazy" />
       </figure>
 
-      <!-- Informasi Produk -->
       <div class="p-4 flex flex-col flex-grow justify-between gap-3">
         <header class="flex flex-col gap-1">
           <div class="flex items-center justify-between text-xs">
@@ -306,23 +280,22 @@
             title="SonicPro Wireless">
             SonicPro Wireless
           </h3>
-          <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-medium">✓ Official Store • Stock
-            Ready</span>
+          <span class="product-subtitle text-[10px] text-emerald-600 dark:text-emerald-400 font-medium">✓
+            Official Store • Stock Ready</span>
         </header>
 
         <p class="product-desc text-slate-500 dark:text-slate-400 text-xs leading-relaxed line-clamp-2">
-          Headphone wireless suara bass mendalam, peredam kebisingan aktif, dan baterai tahan hingga 30 jam pemakaian
-          nonstop.
+          Headphone wireless suara bass mendalam, peredam kebisingan aktif, dan baterai tahan hingga 30 jam
+          pemakaian nonstop.
         </p>
 
-        <!-- Harga -->
         <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-baseline justify-between">
           <div>
-            <p class="text-[10px] text-slate-400 font-medium">Harga Diskon</p>
+            <p class="text-[10px] text-slate-400 font-medium price-label">Harga Diskon</p>
             <div class="flex items-center gap-1.5">
               <span class="product-price text-lg font-extrabold text-orange-600 dark:text-orange-400 tracking-tight">Rp
                 240.000</span>
-              <span class="text-xs text-slate-400 line-through">Rp 300.000</span>
+              <span class="text-xs text-slate-400 line-through price-old">Rp 300.000</span>
             </div>
           </div>
           <span
@@ -331,16 +304,11 @@
           </span>
         </div>
 
-        <!-- Tombol Aksi Bawah -->
         <footer class="flex items-center gap-2 pt-1">
           <button type="button"
-            class="flex-1 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-semibold text-xs py-2 px-3 rounded-xl shadow-sm transition">
+            class="buy-btn flex-1 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-semibold text-xs py-2 px-3 rounded-xl shadow-sm transition">
             Beli Sekarang
           </button>
-          <!-- =============================================================== -->
-          <!-- [SLOT KARTU B: FITUR 6 (MODAL DETAIL)]                          -->
-          <!-- Letakkan tombol Detail (.btn-detail) di sini                    -->
-          <!-- =============================================================== -->
         </footer>
       </div>
     </article>
@@ -353,7 +321,6 @@
       class="product-card group relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full"
       data-author="Muhammad Finlandia Rahman Mawlaa" data-id="3">
 
-      <!-- Baris Atas: Badge Pembuat & Slot Tombol Aksi (Like & Delete) -->
       <div class="absolute top-3 left-3 right-3 z-10 flex items-center justify-between pointer-events-none">
         <span
           class="pointer-events-auto bg-indigo-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm tracking-wide truncate max-w-[120px]"
@@ -361,25 +328,20 @@
           M. Finlandia
         </span>
 
-        <!-- ================================================================= -->
-        <!-- [SLOT KARTU C: FITUR 3 (LIKE) & FITUR 2 (DELETE)]                 -->
-        <!-- Letakkan tombol Like (.btn-like) dan tombol Hapus (.btn-delete)   -->
-        <!-- di dalam div pembungkus di bawah ini:                             -->
-        <!-- ================================================================= -->
         <div
           class="card-actions pointer-events-auto flex items-center gap-1.5 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xs p-1 rounded-full shadow-sm border border-slate-100 dark:border-slate-800">
-          <!-- [FITUR 3] Tombol Like di sini -->
-           <button type="button" class="btn-like flex items-center gap-1 px-2 py-0.5 text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-rose-500 rounded-full transition-colors cursor-pointer" aria-label="Suka">
+          <button type="button"
+            class="btn-like flex items-center gap-1 px-2 py-0.5 text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-rose-500 rounded-full transition-colors cursor-pointer"
+            aria-label="Suka">
             <svg class="w-4 h-4 like-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
             </svg>
             <span class="like-count">987</span>
           </button>
-          <!-- [FITUR 2] Tombol Hapus di sini -->
         </div>
       </div>
 
-      <!-- Gambar Produk -->
       <figure
         class="h-48 sm:h-52 w-full bg-slate-50 dark:bg-slate-800/40 flex items-center justify-center p-3 overflow-hidden border-b border-slate-100 dark:border-slate-800 relative">
         <img src="images/Laptop.jfif" alt="Laptop Ultrabook Layar Tipis"
@@ -387,7 +349,6 @@
           loading="lazy" />
       </figure>
 
-      <!-- Informasi Produk -->
       <div class="p-4 flex flex-col flex-grow justify-between gap-3">
         <header class="flex flex-col gap-1">
           <div class="flex items-center justify-between text-xs">
@@ -407,37 +368,31 @@
             title="Ultrabook Slim">
             Ultrabook Slim
           </h3>
-          <span class="text-[10px] text-slate-400">249 Terjual • Garansi Resmi 2 Th</span>
+          <span class="product-subtitle text-[10px] text-slate-400">249 Terjual • Garansi Resmi 2 Th</span>
         </header>
 
         <p class="product-desc text-slate-500 dark:text-slate-400 text-xs leading-relaxed line-clamp-2">
-          Laptop ringan dengan layar bezel tipis dan performa tinggi. Sangat cocok untuk produktivitas kerja koding dan
-          desain grafis.
+          Laptop ringan dengan layar bezel tipis dan performa tinggi. Sangat cocok untuk produktivitas kerja
+          koding dan desain grafis.
         </p>
 
-        <!-- Harga -->
         <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-baseline justify-between">
           <div>
-            <p class="text-[10px] text-slate-400 font-medium">Harga Resmi</p>
+            <p class="text-[10px] text-slate-400 font-medium price-label">Harga Resmi</p>
             <span class="product-price text-lg font-extrabold text-indigo-600 dark:text-indigo-400 tracking-tight">Rp
               12.500.000</span>
           </div>
           <span
-            class="text-[10px] font-semibold text-indigo-600 bg-indigo-50 dark:bg-indigo-950/60 px-2 py-0.5 rounded">
-            Cicilan 0%
+            class="text-[10px] font-semibold text-indigo-600 bg-indigo-50 dark:bg-indigo-950/60 px-2 py-0.5 rounded price-badge">
+            Cicilan 30%
           </span>
         </div>
 
-        <!-- Tombol Aksi Bawah -->
         <footer class="flex items-center gap-2 pt-1">
           <button type="button"
-            class="flex-1 bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white font-semibold text-xs py-2 px-3 rounded-xl shadow-sm transition">
+            class="buy-btn flex-1 bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white font-semibold text-xs py-2 px-3 rounded-xl shadow-sm transition">
             Beli Sekarang
           </button>
-          <!-- =============================================================== -->
-          <!-- [SLOT KARTU C: FITUR 6 (MODAL DETAIL)]                          -->
-          <!-- Letakkan tombol Detail (.btn-detail) di sini                    -->
-          <!-- =============================================================== -->
         </footer>
       </div>
     </article>
@@ -450,7 +405,6 @@
       class="product-card group relative bg-slate-900 text-white border border-slate-700 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full"
       data-author="Zukovski Tangguh Dirgantara" data-id="4">
 
-      <!-- Baris Atas: Badge Pembuat & Slot Tombol Aksi (Like & Delete) -->
       <div class="absolute top-3 left-3 right-3 z-10 flex items-center justify-between pointer-events-none">
         <span
           class="pointer-events-auto bg-[#28477E] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm tracking-wide truncate max-w-[120px]"
@@ -458,25 +412,20 @@
           Zukovski T.
         </span>
 
-        <!-- ================================================================= -->
-        <!-- [SLOT KARTU D: FITUR 3 (LIKE) & FITUR 2 (DELETE)]                 -->
-        <!-- Letakkan tombol Like (.btn-like) dan tombol Hapus (.btn-delete)   -->
-        <!-- di dalam div pembungkus di bawah ini:                             -->
-        <!-- ================================================================= -->
         <div
           class="card-actions pointer-events-auto flex items-center gap-1.5 bg-slate-800/90 backdrop-blur-xs p-1 rounded-full shadow-sm border border-slate-700">
-          <!-- [FITUR 3] Tombol Like di sini -->
-           <button type="button" class="btn-like flex items-center gap-1 px-2 py-0.5 text-xs font-medium text-slate-300 hover:text-rose-500 rounded-full transition-colors cursor-pointer" aria-label="Suka">
+          <button type="button"
+            class="btn-like flex items-center gap-1 px-2 py-0.5 text-xs font-medium text-slate-300 hover:text-rose-500 rounded-full transition-colors cursor-pointer"
+            aria-label="Suka">
             <svg class="w-4 h-4 like-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
             </svg>
             <span class="like-count">1024</span>
           </button>
-          <!-- [FITUR 2] Tombol Hapus di sini -->
         </div>
       </div>
 
-      <!-- Gambar Produk -->
       <figure
         class="h-48 sm:h-52 w-full bg-slate-800 flex items-center justify-center p-3 overflow-hidden border-b border-slate-700 relative">
         <img
@@ -486,7 +435,6 @@
           loading="lazy" />
       </figure>
 
-      <!-- Informasi Produk -->
       <div class="p-4 flex flex-col flex-grow justify-between gap-3">
         <header class="flex flex-col gap-1">
           <div class="flex items-center justify-between text-xs">
@@ -506,34 +454,30 @@
             title="Galaxy S25 FE">
             Galaxy S25 FE
           </h3>
-          <span class="text-[10px] text-blue-300 font-medium">✨ Galaxy AI Powered</span>
+          <span class="product-subtitle text-[10px] text-blue-300 font-medium">✨ Galaxy AI Powered</span>
         </header>
 
         <p class="product-desc text-slate-400 text-xs leading-relaxed line-clamp-2">
-          Smartphone premium-value dengan desain elegan, performa tinggi, dan fitur kecerdasan Galaxy AI terbaru.
+          Smartphone premium-value dengan desain elegan, performa tinggi, dan fitur kecerdasan Galaxy AI
+          terbaru.
         </p>
 
-        <!-- Harga -->
         <div class="pt-2 border-t border-slate-700 flex items-baseline justify-between">
           <div>
-            <p class="text-[10px] text-slate-400 font-medium">Harga Resmi</p>
-            <span class="product-price text-lg font-extrabold text-blue-400 tracking-tight">Rp 10.500.000</span>
+            <p class="text-[10px] text-slate-400 font-medium price-label">Harga Resmi</p>
+            <span class="product-price text-lg font-extrabold text-blue-400 tracking-tight">Rp
+              10.500.000</span>
           </div>
-          <span class="text-[10px] font-semibold text-blue-300 bg-[#28477E]/50 px-2 py-0.5 rounded">
+          <span class="text-[10px] font-semibold text-blue-300 bg-[#28477E]/50 px-2 py-0.5 rounded price-badge">
             Tersedia
           </span>
         </div>
 
-        <!-- Tombol Aksi Bawah -->
         <footer class="flex items-center gap-2 pt-1">
           <button type="button"
-            class="flex-1 bg-[#28477E] hover:bg-blue-700 active:scale-95 text-white font-semibold text-xs py-2 px-3 rounded-xl shadow-sm transition">
+            class="buy-btn flex-1 bg-[#28477E] hover:bg-blue-700 active:scale-95 text-white font-semibold text-xs py-2 px-3 rounded-xl shadow-sm transition">
             Beli Sekarang
           </button>
-          <!-- =============================================================== -->
-          <!-- [SLOT KARTU D: FITUR 6 (MODAL DETAIL)]                          -->
-          <!-- Letakkan tombol Detail (.btn-detail) di sini                    -->
-          <!-- =============================================================== -->
         </footer>
       </div>
     </article>
@@ -546,7 +490,6 @@
       class="product-card group relative bg-[#f7fbff] dark:bg-slate-900 border border-blue-100 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full"
       data-author="Visqya Pebriola Assyura" data-id="5">
 
-      <!-- Baris Atas: Badge Pembuat & Slot Tombol Aksi (Like & Delete) -->
       <div class="absolute top-3 left-3 right-3 z-10 flex items-center justify-between pointer-events-none">
         <span
           class="pointer-events-auto bg-[#f4a8c1] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm tracking-wide truncate max-w-[120px]"
@@ -554,25 +497,20 @@
           Visqya P.
         </span>
 
-        <!-- ================================================================= -->
-        <!-- [SLOT KARTU E: FITUR 3 (LIKE) & FITUR 2 (DELETE)]                 -->
-        <!-- Letakkan tombol Like (.btn-like) dan tombol Hapus (.btn-delete)   -->
-        <!-- di dalam div pembungkus di bawah ini:                             -->
-        <!-- ================================================================= -->
         <div
           class="card-actions pointer-events-auto flex items-center gap-1.5 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xs p-1 rounded-full shadow-sm border border-slate-100 dark:border-slate-800">
-          <!-- [FITUR 3] Tombol Like di sini -->
-           <button type="button" class="btn-like flex items-center gap-1 px-2 py-0.5 text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-rose-500 rounded-full transition-colors cursor-pointer" aria-label="Suka">
+          <button type="button"
+            class="btn-like flex items-center gap-1 px-2 py-0.5 text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-rose-500 rounded-full transition-colors cursor-pointer"
+            aria-label="Suka">
             <svg class="w-4 h-4 like-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
             </svg>
             <span class="like-count">1789</span>
           </button>
-          <!-- [FITUR 2] Tombol Hapus di sini -->
         </div>
       </div>
 
-      <!-- Gambar Produk -->
       <figure
         class="h-48 sm:h-52 w-full bg-white dark:bg-slate-800/40 flex items-center justify-center p-3 overflow-hidden border-b border-blue-100 dark:border-slate-800 relative">
         <img src="images/huawei.jpg" alt="HUAWEI WATCH GT 5"
@@ -580,7 +518,6 @@
           loading="lazy" />
       </figure>
 
-      <!-- Informasi Produk -->
       <div class="p-4 flex flex-col flex-grow justify-between gap-3">
         <header class="flex flex-col gap-1">
           <div class="flex items-center justify-between text-xs">
@@ -601,7 +538,6 @@
             HUAWEI WATCH GT 5
           </h3>
 
-          <!-- Feature Pills -->
           <div class="flex items-center gap-1.5 mt-0.5">
             <span
               class="text-[9px] font-semibold bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-300 px-1.5 py-0.5 rounded border border-blue-100 dark:border-slate-700">AMOLED</span>
@@ -615,52 +551,32 @@
         </header>
 
         <p class="product-desc text-slate-500 dark:text-slate-400 text-xs leading-relaxed line-clamp-2">
-          Smartwatch premium AMOLED display, pemantauan kesehatan & olahraga komprehensif, dan baterai tahan hingga 14
-          hari.
+          Smartwatch premium AMOLED display, pemantauan kesehatan & olahraga komprehensif, dan baterai tahan
+          hingga 14 hari.
         </p>
 
-        <!-- Harga -->
         <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-baseline justify-between">
           <div>
-            <p class="text-[10px] text-slate-400 font-medium">Harga Resmi</p>
+            <p class="text-[10px] text-slate-400 font-medium price-label">Harga Resmi</p>
             <span class="product-price text-lg font-extrabold text-[#1e2e4f] dark:text-blue-300 tracking-tight">Rp
               3.499.000</span>
           </div>
-          <span class="text-[10px] font-semibold text-rose-600 bg-rose-50 dark:bg-rose-950/60 px-2 py-0.5 rounded">
+          <span
+            class="text-[10px] font-semibold text-rose-600 bg-rose-50 dark:bg-rose-950/60 px-2 py-0.5 rounded price-badge">
             Bestseller
           </span>
         </div>
 
-        <!-- Tombol Aksi Bawah -->
         <footer class="flex items-center gap-2 pt-1">
           <button type="button"
-            class="flex-1 bg-[#28477E] hover:bg-blue-800 active:scale-95 text-white font-semibold text-xs py-2 px-3 rounded-xl shadow-sm transition">
+            class="buy-btn flex-1 bg-[#28477E] hover:bg-blue-800 active:scale-95 text-white font-semibold text-xs py-2 px-3 rounded-xl shadow-sm transition">
             Beli Sekarang
           </button>
-          <!-- =============================================================== -->
-          <!-- [SLOT KARTU E: FITUR 6 (MODAL DETAIL)]                          -->
-          <!-- Letakkan tombol Detail (.btn-detail) di sini                    -->
-          <!-- =============================================================== -->
         </footer>
       </div>
     </article>
 
   </main>
-  <!-- Akhir dari Grid Container -->
-
-
-  <!-- ========================================================================= -->
-  <!-- [SLOT HTML FITUR 6: WADAH POPUP MODAL DETAIL]                             -->
-  <!-- Anggota pemegang Fitur 6 (Modal): Tempatkan elemen HTML dialog modal      -->
-  <!-- popup detail produk di bawah sini (beri class 'hidden' secara default)    -->
-  <!-- ========================================================================= -->
-
-
-  <!-- ========================================================================= -->
-  <!-- [SLOT HTML FITUR 1: WADAH FORM / MODAL TAMBAH PRODUK]                     -->
-  <!-- Anggota pemegang Fitur 1 (Create/DOM): Tempatkan elemen HTML form atau    -->
-  <!-- modal tambah produk di bawah sini                                         -->
-  <!-- ========================================================================= -->
 
 
   <!-- ========================================================================= -->
@@ -672,7 +588,7 @@
 
 
   <!-- ========================================================================= -->
-  <!-- SCRIPT JAVASCRIPT TIAP ANGGOTA (Folder /js)                               -->
+  <!-- SCRIPT JAVASCRIPT TIAP ANGGOTA                                            -->
   <!-- ========================================================================= -->
   <script src="js/theme.js" defer></script>
   <script src="js/like.js" defer></script>
