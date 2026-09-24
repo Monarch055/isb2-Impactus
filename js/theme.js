@@ -2,7 +2,7 @@
  * ==============================================================================
  * FITUR 5: THEME TOGGLE - DARK MODE / LIGHT MODE
  * ==============================================================================
- * Dikerjakan oleh   : [Tulis Nama Anggota di Sini]
+ * Dikerjakan oleh   : Zukovski Tangguh Dirgantara
  *
  * 🎯 TUJUAN TUGAS:
  * Membuat tombol Dark Mode / Light Mode yang mengubah warna latar belakang dan teks
@@ -56,4 +56,33 @@
  */
 
 // Tulis kodemu di bawah sini:
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Ambil elemen tombol dan teks/ikon di dalamnya
+  const toggleBtn = document.getElementById('btn-theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  const themeText = document.getElementById('theme-text');
 
+  // Cek localStorage saat halaman pertama dimuat
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.classList.add('dark');
+    themeIcon.textContent = '☀️';
+    themeText.textContent = 'Light Mode';
+  }
+
+  // 2. Pasang event listener untuk mendeteksi klik
+  toggleBtn.addEventListener('click', () => {
+    // 3. Toggle class 'dark' pada elemen <html> (<html class="dark">)
+    const isDark = document.documentElement.classList.toggle('dark');
+
+    // 4. Ubah tampilan ikon dan teks berdasarkan status
+    if (isDark) {
+      themeIcon.textContent = '☀️';
+      themeText.textContent = 'Light Mode';
+      localStorage.setItem('theme', 'dark'); // Simpan preferensi
+    } else {
+      themeIcon.textContent = '🌙';
+      themeText.textContent = 'Dark Mode';
+      localStorage.setItem('theme', 'light'); // Simpan preferensi
+    }
+  });
+});
