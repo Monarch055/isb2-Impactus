@@ -57,4 +57,36 @@
  */
 
 // Tulis kodemu di bawah sini:
+document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("click", function (event) {
+    const likeBtn = event.target.closest(".btn-like");
+    if (!likeBtn) return;
+    const countElement = likeBtn.querySelector(".like-count");
+    const iconElement = likeBtn.querySelector(".like-icon");
+    let currentCount = parseInt(countElement.textContent) || 0;
+    const isLiked = likeBtn.classList.contains("is-liked");
+
+    if (!isLiked) {
+      //Turn On
+      likeBtn.classList.add("is-liked");
+      countElement.textContent = currentCount + 1;
+      // Mengubah tombol
+      likeBtn.classList.add("text-rose-500");
+      likeBtn.classList.remove("text-slate-600", "dark:text-slate-300");
+      if (iconElement) {
+        iconElement.setAttribute("fill", "currentColor");
+      }
+    } else {
+      // Mode Off
+      likeBtn.classList.remove("is-liked");
+      countElement.textContent = currentCount - 1;
+      // Mengembalikan tombol
+      likeBtn.classList.remove("text-rose-500");
+      likeBtn.classList.add("text-slate-600", "dark:text-slate-300");
+      if (iconElement) {
+        iconElement.setAttribute("fill", "none");
+      }
+    }
+  });
+});
 
