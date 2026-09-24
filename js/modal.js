@@ -101,4 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    btnClose.addEventListener('click', () => {
+        modal.classList.add('hidden');
+    });
+
 });
