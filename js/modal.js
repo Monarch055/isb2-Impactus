@@ -91,7 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const img = card.querySelector('figure img').src;
             const desc = card.querySelector('.product-desc').textContent;
             const price = card.querySelector('.product-price').textContent;
-            
+
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-image').src = img;
+            document.getElementById('modal-desc').textContent = desc;
+            document.getElementById('modal-price').textContent = price;
+
+            modal.classList.remove('hidden');
         });
     });
 
