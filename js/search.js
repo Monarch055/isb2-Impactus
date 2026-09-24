@@ -62,3 +62,26 @@
 
 // Tulis kodemu di bawah sini:
 
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+
+    if (searchInput) {
+        searchInput.addEventListener('input', (event) => {
+            const keyword = event.target.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.product-card');
+
+            cards.forEach((card) => {
+                const titleElement = card.querySelector('.product-title');
+                if (titleElement) {
+                    const title = titleElement.textContent.toLowerCase();
+                    if (title.includes(keyword)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    }
+});
+
