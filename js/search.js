@@ -60,3 +60,24 @@
 
 // Tulis kodemu di bawah sini:
 
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+
+    searchInput.addEventListener('input', (event) => {
+        const keyword = event.target.value.toLowerCase().trim();
+        const cards = document.querySelectorAll('.product-card');
+
+        cards.forEach((card) => {
+            const title = card.querySelector('.product-title').textContent.toLowerCase();
+            if (title.includes(keyword)) {
+                card.classList.remove('hidden'); // ✅ BENAR (gunakan 'card' tunggal)
+            }
+            else {
+                card.classList.add('hidden');    // ✅ BENAR (gunakan 'card' tunggal)
+            }
+        });
+    });
+});
+
+
+
